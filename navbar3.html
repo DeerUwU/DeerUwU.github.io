@@ -24,26 +24,26 @@
 				<div class="sidebar">
 					<div class="sidebar_content">
 						<!-- ############################################################## -->
-						<li class="sidebar_list"><a href="index.html" class="links">Home</a></li>
-						<li class="sidebar_list"><a href="js_tests.html" 
-						class="links">sidebar old</a></li>
-					
-						<li class="sidebar_list"><a href="js_tests2.html" 
-						class="links" style="cursor: default;">Placeholder</a></li>
-					
-						<li class="sidebar_list"><a href="js_tests2.html" 
-						class="links" style="cursor: default;">Placeholder</a></li>
-					
-						<li class="sidebar_list"><a href="js_tests2.html" 
-						class="links" style="cursor: default;">Placeholder</a></li>
-					
-						<li class="sidebar_list"><a href="js_tests2.html" 
-						class="links" style="cursor: default;">Placeholder</a></li>
+						<div class="sidebar_list">
+							<li><a href="index.html" class="links">Home</a></li>
+							<li><a href="js_tests.html" class="links">sidebar old</a></li>
+							<li><a href="js_tests2.html" class="links" style="cursor: default;">navbar v2</a></li>
+							<li><a href="navbar3.html" class="links" style="cursor: default;">Placeholder</a></li>
+							<li><a href="navbar3.html" class="links" style="cursor: default;">Placeholder</a></li>
+							<li><a href="navbar3.html" class="links" style="cursor: default;">Placeholder</a></li>
+						</div>
 						<!-- ############################################################## -->
+						
 						<!-- vvv this is the theme button vvv -->
-						<span class="material-symbols-outlined deer-fade"
-							id="themebutton" style="cursor: pointer; font-variation-settings: 'FILL' 0">&#xe430;</span>
-							
+						<div id="themebutton_div"align="center">
+							<span 
+							class="material-symbols-outlined deer-fade"
+							id="themebutton" 
+							style="cursor: pointer; font-variation-settings: 'FILL' 0;">
+							&#xe430;
+							</span>
+						</div>
+						
 							<script>
 								var root = document.querySelector(':root');
 								let themebutton = document.querySelector('#themebutton');
@@ -69,9 +69,11 @@
 					</div>
 				</div>
 				<!-- vvv this is the sidebar arrow vvv -->
-				<span style="cursor: pointer;" 
-				class="sidebar_button material-symbols-outlined">&#xe5e0;
-				</span>
+				<div id="sidebar_button_div" style="">
+					<span style="cursor: pointer;" 
+					class="sidebar_button material-symbols-outlined">&#xe5e0;
+					</span>
+				</div>
 				
 				<div class="main"> <!-- this is the main content -->
 					<div class="blogpost" align="center">					
