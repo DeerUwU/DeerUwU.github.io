@@ -11,6 +11,9 @@ html, body {
 	background-color: var(--deer-dark);
 	transition-duration: .2s;	
 }
+main {/* 	uncomment when I make the sidebar extend to the bottom of the page properly */
+	height: 100%;
+}
 
 h1, h2, h3, h4, h5, h6, p, li {
 	color: var(--deer-bright);
@@ -44,6 +47,7 @@ section > div > p {
   height:100%;
   flex-grow: 1;
   justify-content: center;
+  overflow-y: auto;
 }
 
 /* ################################################ */
