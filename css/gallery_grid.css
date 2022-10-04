@@ -30,18 +30,30 @@ p {
   font-size: 18px;
 }
 
-section {
-	background: lightgray;	
-}
+section {background: lightgray;	}
 
-img {
-	user-select: none;
-}
+img {user-select: none;}
 
+iframe {border-radius: var(--radius);}
+
+video {border-radius: var(--radius);}
+
+.rounded {
+	/* border-width: 4px; */
+	border-radius: var(--radius);
+	margin: 20px 0;
+	border: 3px solid var(--deer-bright);
+	color: var(--deer-bright);
+}
 
 /* ################################################################## */
 
 .main-header {
+	display: inline-block;
+	
+}
+
+header > div {
 	display: flex;
 	justify-content: center;
 }
@@ -53,7 +65,7 @@ img {
 	justify-content: center;
 	grid-template-columns: 250px 250px 250px 250px;
 	background-color: var(--deer-sidebar);
-	padding: 10px;
+	padding: 40px;
 	gap: 20px;
 }
 .grid-container > div { /* for the individual grid items */
@@ -71,6 +83,8 @@ img {
 	transition: filter .5s;
 	border: none;
 	overflow: hidden;
+	border-radius: 5px;
+	
 }
 .grid-container > div:hover { /* for the individual grid items */
 	filter: brightness(1.25);
@@ -102,10 +116,20 @@ img {
 	background-size: cover;
 }
 .item4 {
-	background-image: url("../assets/small/fishtank v3.jpg");
+	background-image: url("../assets/small/forest_hl2.jpg");
 	background-size: cover;
 }
-.item5, .item6, .item7, .item8 {
+.item5 {
+	background-image: url("../assets/deerbot_full_square.png");
+	background-size: cover;
+}
+
+.item6 {
+	background-image: url("../assets/small/overlay_thumb.png");
+	background-size: cover;
+}
+
+.item7, .item8 {
 	background-image: url("../assets/coming_soon.png");
 	background-size: cover;
 	cursor: default!important;
@@ -141,11 +165,17 @@ img {
   width: 60%; /* Could be more or less, depending on screen size */
 }
 
+.modal_img_container {
+	display: flex;
+	justify-content: center;
+	width: 50vw;
+}
+
 .modal_img {
-	max-width: fit;
-	/* max-height: 50vh; */
-	align: center;
 	border-radius: var(--radius);
+	max-width: 100%;
+	max-height: 600px;
+	margin: 0px 20px;
 }
 
 /* The Close Button */
@@ -155,6 +185,7 @@ img {
   font-size: 48px;
   font-weight: bold;
   text-align: right;
+  user-select: none;
 }
 
 .close:hover,

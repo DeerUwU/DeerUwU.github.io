@@ -1,25 +1,3 @@
-/* var modal = document.querySelector("#modal1"); // Get the modal
-var openModal = document.querySelector(".item1"); // Get the button that opens the modal
-var span = document.getElementsByClassName("close")[0]; // Get the <span> element that closes the modal
-
-// When the user clicks on the button, open the modal
-openModal.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} */
-
 //on modal button click, it will find the type id specified in the html
 $(".modal_button").click(function(){
    $(".modal").hide();
@@ -33,3 +11,42 @@ $(".close").click(function(){
    var Type = $(this).data("modal-type");
    $("#"+Type).hide();
 });
+
+$('.modal').click(function(e) {
+    if ($(e.target).is('.modal')) {
+        $(".modal").hide();
+		var Type = $(this).data("modal-type");
+		$("#"+Type).hide();
+    }
+});
+// #######################################################
+/* const captionShow = [
+  { transform: 'translateY(0px)', easing: 'ease-in-out'},
+  { transform: 'translateY(50px)' }
+];
+const captionHide = [
+  { transform: 'translateY(50px)', easing: 'ease-in-out'},
+  { transform: 'translateY(0px)' }
+];
+
+const moveTiming = {
+  duration: 500, //500 ms
+  iterations: 1,
+  fill: 'forwards'
+} */
+// #######################################################
+/* var gridTile = document.querySelector(".modal_button"); //get the gridtile
+var caption = document.querySelector(".captions");
+let hidden = true;
+
+gridTile.addEventListener("mouseover", showCaption);
+
+function showCaption(event){
+	if (hidden){
+		caption.animate(captionShow, moveTiming);
+		hidden = false;
+	} else {
+		caption.animate(captionHide, moveTiming);
+		hidden = true;
+	}
+} */

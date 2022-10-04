@@ -16,20 +16,35 @@
 <!-- ################################################################################# -->
 	<body>
 		<header>
-			<h1 class="deer-fade main-header">These are some of my projects</h1>
+			<div>
+				<h1 class="deer-fade main-header"
+				style= "margin-top: 50px">About me</h1>
+			</div>
 		</header>
 	<!-- ################################################################################# -->
 		<main> 
+	
+		<div style="display:flex; justify-content: center; ">
+			
+			<p style="font-size: 24px; width: 50vw;"> 
+			Hi I'm Emily, and I'm a passionate 3D artist and aspiring graphic 
+			designer from germany. Please keep in mind that this website was
+			designed with the desktop format in mind. Anyways, here is some 
+			of my work
+			<br></p>
+			
+		</div>
+			
+		
 		
 		<div class="grid-container">
 			<div class="item1 modal_button" data-modal-type="type1"> <div class="captions">Bnuyy</div> </div>
 			<div class="item2 modal_button" data-modal-type="type2"> <div class="captions">King</div> </div>
-			<div class="item3 modal_button" data-modal-type="type3"> <div class="captions">wii remote</div> </div>  
-			<div class="item4 modal_button" data-modal-type="type4"> <div class="captions">fishtank</div> </div>
+			<div class="item3 modal_button" data-modal-type="type3"> <div class="captions">Wii Remote</div> </div>  
+			<div class="item4 modal_button" data-modal-type="type4"> <div class="captions">Forest Animation</div> </div>
+			<div class="item5 modal_button" data-modal-type="type5"> <div class="captions">My Logo</div> </div>
+			<div class="item6 modal_button" data-modal-type="type6"> <div class="captions">Stream Overlay</div> </div>
 		  
-			<div class="item5"> <div class="captions">coming soon </div> </div>
-		  
-			<div class="item6"> <div class="captions">coming soon</div> </div>  
 			<div class="item7"> <div class="captions">coming soon</div> </div>
 			<div class="item8"> <div class="captions">coming soon</div> </div> 
 		</div>
@@ -40,8 +55,12 @@
 					<span class="close">&times;</span>
 					<h1 class="deer-fade main-header">bnuyy project</h1>
 					
-					<img src="./assets/bunny_final.png" 
-					alt="bunuyy" class="modal_img">
+					<div class="modal_img_container">
+						<img src="./assets/bunny_final.png" 
+						alt="bunuyy" 
+						class="modal_img"
+						loading="lazy">
+					</div>
 					
 					<p>I made this scene because I wanted to take a school assignment
 					beyond the scope of the assignment to make something visually more
@@ -52,8 +71,12 @@
 					Overall I learned a lot about hair systems and hair grooming through
 					this project.</p>
 					
-					<img src="./assets/bunny_final_wireframe.png" 
-					alt="bunuyy" class="modal_img">
+					<div class="modal_img_container">
+						<img src="./assets/bunny_final_wireframe.png" 
+						alt="bunuyy" 
+						class="modal_img"
+						loading="lazy">
+					</div>
 					
 				</div>
 			</div>	
@@ -65,17 +88,25 @@
 					<span class="close">&times;</span>
 					<h1 class="deer-fade main-header">The Owl House - King</h1>
 					
-					<img src="./assets/king.png" 
-					alt="king" class="modal_img">
+					<div class="modal_img_container">
+						<img src="./assets/king.png" 
+						alt="king" 
+						class="modal_img" 
+						loading="lazy">
+					</div>
 					
-					<p>After seeing the disney show "The Owl House", I decided to practice
-					my sculpting and fur grooming skills again. It is definitely a challenge
-					to translate a 2d character into 3d while keeping the look as close to
+					<p>After seeing the disney show "The Owl House", I decided to use this aside
+					an opportunity to practice my sculpting and fur grooming skills. It is definitely 
+					a challenge to translate a 2d character into 3d while keeping the look as close to
 					the original as possible. After sculpting, the model has been retopologized
 					to reduce the face count by 99%.</p>
 					
-					<img src="./assets/king_viewport.png" 
-					alt="king" class="modal_img">
+					<div class="modal_img_container">
+						<img src="./assets/king_viewport.png" 
+						alt="king in the viewport" 
+						class="modal_img"
+						loading="lazy">
+					</div>
 					
 				</div>
 			</div>	
@@ -87,8 +118,12 @@
 					<span class="close">&times;</span>
 					<h1 class="deer-fade main-header">Realistic wii remote</h1>
 					
-					<img src="./assets/wii remote pink.png" 
-					alt="realistic wii remote" class="modal_img">
+					<div class="modal_img_container">
+						<img src="./assets/wii remote pink.png" 
+						alt="realistic wii remote floating" 
+						class="modal_img"
+						loading="lazy">
+					</div>
 					
 					<p>This was a modelling challenge to create a realistic wii remote.
 					For reference I used various images online aswell as a real remote.</p>
@@ -96,23 +131,162 @@
 				</div>
 			</div>	
 		</div>
-		<!-- #########################    fishtank    ############################## -->
+		<!-- #########################    hl2 forest    ############################## -->
 		<div id="type4" class="modal">
 			<div class="modal_content">
 				<div style="display: flex; flex-direction: column; margin: 0 5vw">
 					<span class="close">&times;</span>
-					<h1 class="deer-fade main-header">Fishtank scene</h1>
+					<h1 class="deer-fade main-header">Forest Animation</h1>
 					
-					<img src="./assets/fishtank v3.png" 
-					alt="fishtank scene" class="modal_img">
 					
-					<p>Lorem Ipsum I love my gf uwuwuwu</p>
+					<div class="modal_img_container">
+						<video width="100%" height="auto" preload="none" controls
+						poster="./assets/hl2_forest_vid_thumbnail.jpg">
+							<source src="./assets/hl2_forest_pt1.webm" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+
+					
+					<p>This animation was created after taking some inspiration from ai
+					generated images. The one that really caught my attention is the 
+					image in the center due to its atmospheric and ominous lighting which
+					leads you to ask yourself "where is this light coming from and why?"
+					you immediately want to know more, which makes it a great subject
+					for a scene. My goals were to learn and practice how to deal with 
+					the organization of larger projects, aswell as practicing my rigging 
+					and animation skills.</p>
+					
+					<div class="modal_img_container"> <!-- add cool behind the scenes images -->
+						<img src="./assets/hl2_ai_prompt.png" 
+						alt="ai images which inspired this project" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<p>Of course I had to create various assets for this scene like the
+					weapon, which is a Winchester Model 1886 rifle. The modeling was
+					done in blender and the texturing in Substance Painter. This weapon
+					in particular has a complex shape due to the blend of flat and rounded
+					shapes intersecting with eachother. I learned a lot about the approach
+					of more complex shapes and how to deal with them.
+					</p>
+					
+					<div class="modal_img_container"> <!-- add cool behind the scenes images -->
+						<img src="./assets/winchester_model_1886.png" 
+						alt="winchester model 1886 weapon render" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<p>Some other challenging parts in this project was the rigging for
+					the arms as I'm not as experienced with it.</p>
+					
+					<div class="modal_img_container">
+						<video width="100%" height="auto" muted loop autoplay>
+							<source src="./assets/gordon_arms_rig.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					
 					
 				</div>
 			</div>	
 		</div>
-		<!-- ################################################################# -->
-		
+		<!-- ######################    my logo    ########################### -->
+		<div id="type5" class="modal">
+			<div class="modal_content">
+				<div style="display: flex; flex-direction: column; margin: 0 5vw">
+					<span class="close">&times;</span>
+					<h1 class="deer-fade main-header">My Logo</h1>
+					
+					
+					<p>This is my logo, used to represent myself as a graphic
+					designer. I chose a simplistic deer because I personally
+					like the animal. The rounded design is deliberate in order
+					to appear more approachable and friendly. I based the logo 
+					off of an earlier drawing and vectorized it in Illustrator.
+					</p>
+					
+					<div class="modal_img_container">
+						<img src="./assets/deerbot_favicon.png" 
+						alt="deer logo round" 
+						height="300px"
+						class="modal_img"
+						loading="lazy">
+						
+						<img src="./assets/deerbot old.png" 
+						alt="deer logo old drawing" 
+						height="300px"
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+				</div>
+			</div>	
+		</div>
+		<!-- ########################  stream overlay  #################### -->
+		<div id="type6" class="modal">
+			<div class="modal_content">
+				<div style="display: flex; flex-direction: column; margin: 0 5vw">
+					<span class="close">&times;</span>
+					<h1 class="deer-fade main-header">Sleek Stream Overlay</h1>
+					
+					<p>This is a so called "streaming overlay", which is essentially
+					an overlay for live-streamers on platforms like twitch to give
+					their streams their personal touch while also giving the viewers
+					something pleasing to look at. The goal for this overlay was to
+					create a monochrome minimalist yet also modern design to give off
+					a professional look for the client. In total 5 seperate screens,
+					an animated looping background, and scene transitions were created
+					for the client.</p>
+					
+					<div class="modal_img_container">
+						<img src="./assets/stream_overlay/starting.png" 
+						alt="streaming overlay page" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<hr class="rounded">
+					
+					<div class="modal_img_container">
+						<img src="./assets/stream_overlay/gaming.jpg" 
+						alt="streaming overlay page" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<hr class="rounded">
+					
+					<div class="modal_img_container">
+						<img src="./assets/stream_overlay/chatting.png" 
+						alt="streaming overlay page" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<hr class="rounded">
+					
+					<div class="modal_img_container">
+						<img src="./assets/stream_overlay/brb.png" 
+						alt="streaming overlay page" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+					<hr class="rounded">
+					
+					<div class="modal_img_container">
+						<img src="./assets/stream_overlay/offline.png" 
+						alt="streaming overlay page" 
+						class="modal_img"
+						loading="lazy">
+					</div>
+					
+				</div>
+			</div>	
+		</div>
 		
 		
 		
