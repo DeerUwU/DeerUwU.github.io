@@ -4,47 +4,47 @@
 }
 
 /* ##################################################################*/
-
-/* this is for phone screens only */
-@media only screen and (hover: none) and (pointer: coarse) {
-	.aboutme{
-		width: 80%!important;
-		font-size: 18px!important;
-	}
-	
-	h1 {font-size: 48px!important;}
-	.modal_content {width: 80%!important;}
-	/* div inside .modal content that adds margin to the modal content*/
-	.modal_content  > div {margin: 0 1vw;}
-	.modal_img_container {width: 65vw!important;}
-	p {font-size: 14px;}
-	
-	.grid-container > div { /* for the individual grid items */
-		height: 200px!important;
-		width: 200px!important;
-	}
-	.captions { /* for the captions for each image */	
-		font-size: 16px;
-		line-height: 30px!important;
-	}
-}
-
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1120px){
 	.aboutme{width: 80%!important;}
-	
 	.modal_content {width: 70%!important;}
-	
 	.modal_img_container {width: 60vw!important;}
 	
 	.grid-container {
 	display: flex!important;
 	flex-wrap: wrap!important;
-	justify-content: center;
-	background-color: var(--deer-sidebar);
-	padding: 40px;
-	gap: 20px;
 	}
 }
+
+/* this is for phone screens only */
+@media only screen and (hover: none) and (pointer: coarse) {
+	.aboutme{
+		width: 80%!important;
+		font-size: 14px!important;
+		margin-top: 0!important;
+	}
+	
+	.main-header {font-size: 48px!important;}
+	.modal-header {font-size: 32px!important;}
+	.modal_content {width: 90%!important;}
+	/* div inside .modal content that adds margin to the modal content*/
+	.modal_content  > div {margin: 0 1vw!important;}
+	.modal_img_container {width: 100%!important;}
+	p {font-size: 12px!important;}
+	
+	.grid-container > div { /* for the individual grid items */
+		height: 180px!important;
+		width: 180px!important;
+	}
+	.captions { /* for the captions for each image */	
+		font-size: 14px!important;
+		line-height: 30px!important;
+	}
+	.rounded {
+		border: 2px solid var(--deer-bright)!important;
+	}
+}
+
+
 /* ################################################################## */
 html, body {
 	margin: 0;
@@ -90,11 +90,16 @@ video {border-radius: var(--radius);}
 
 
 /* ################################################################## */
-.main-header {display: inline-block;}
+.main-header, .modal-header {display: inline-block;}
 
 header > div {
 	display: flex;
 	justify-content: center;
+}
+
+.aboutme {
+	font-size: 24px; 
+	width: 60%;
 }
 /* ################################################################## */
 
@@ -218,13 +223,13 @@ header > div {
 .modal_img_container {
 	display: flex;
 	justify-content: center;
-	width: 50vw;
+	width: 100%;
 }
 
 .modal_img {
 	border-radius: var(--radius);
 	max-width: 100%;
-	max-height: 600px;
+	max-height: 60vh;
 	margin: 0px 20px;
 }
 
