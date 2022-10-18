@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-:root{}
-
+:root{
+--deer-dark: #121212;
+--deer-pink: #E38CA3;
+--deer-bright: #FAF9E5;
+--deer-sidebar: #1c1c1c;
+}
 /* ##################################################################*/
 @media only screen and (max-width: 1120px){
 	.aboutme{width: 80%!important;}
@@ -107,6 +111,17 @@ video {border-radius: var(--radius);}
 
 
 /* ################################################################## */
+.logowatermark {
+	position: fixed;
+	display: flex;
+	bottom: 0%;
+	margin: 20px;
+	/* background: var(--deer-pink);
+	border-radius: 500px;
+	padding: 3px 10px; */
+}
+
+
 .main-header, .modal-header {display: inline-block;}
 
 /* .bg_video_div {
