@@ -1,2 +1,2 @@
-# DeerUwU.github.io
+# cakeeh.graphics
 Personal website uwu
