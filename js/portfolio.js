@@ -19,6 +19,7 @@ $('.modal').click(function(e) {
 		$("#"+Type).hide();
     }
 });
+
 // #######################################################
 /* const captionShow = [
   { transform: 'translateY(0px)', easing: 'ease-in-out'},
