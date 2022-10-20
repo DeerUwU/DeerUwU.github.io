@@ -3,6 +3,7 @@
 /* --deer-dark: #212232; */
 --deer-dark: #181925;
 --deer-pink: #E38CA3;
+--deer-magenta: #A32459;
 --deer-bright: #FAF9E5;
 /* --deer-sidebar: #363852; */
 --deer-sidebar: #222334;
@@ -11,6 +12,7 @@
 
 ::selection {
   background: #ff4c7ea6;
+  color: white;
 }
 
 @keyframes unblur {
