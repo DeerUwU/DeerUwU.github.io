@@ -7,13 +7,13 @@
 		<title>Hiiiiii hai hii :)</title>
 		<link rel="icon" type="image/x-icon" href="./assets/deerbot_favicon.png">
 		
-		<meta property="og:image" content="https://deeruwu.github.io/assets/deerbot_favicon.png">
-		<meta property="og:image:alt" content="deer logo" />
+		<meta property="og:image" content="./assets/personal/pfp_current.png">
+		<meta property="og:image:alt" content="deer logo"/>
 		<meta property="og:image:width" content="256">
 		<meta property="og:image:height" content="256">
 		<meta property="og:title" content="deer's personal page">
 		<meta property="og:description" content="Hi, thanks for checking out my stuff.">
-		<meta property="og:url" content="gallery_grid.html" />
+		<meta property="og:url" content="gallery_grid.html"/>
 		<meta property="og:type" content="website">
 		
 		
@@ -23,7 +23,7 @@
 		<!-- This retrieves the latest Twemoji script -->
 		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/f6593481b4.js" crossorigin="anonymous"></script>
-		<script> <!-- Script to render emojis as Twemojis -->
+		<script> // Script to render emojis as Twemojis
 			window.onload = function() {    
 				// Parses the document body and inserts <img> tags in place of Unicode Emojis    
 				twemoji.parse(document.body, 
@@ -31,16 +31,21 @@
 				);
 			}
 		</script>
-
-		<style> <!-- CSS configurations to tweak how the Twemojis are displayed -->
-			
-		</style>
+		<!-- CSS configurations to tweak how the Twemojis are displayed -->
+		<style></style>
 		
 	</head>
 <!-- ################## layout left side ########################## -->
 	<body>
 		<main>
-			<div id="particles-js" style="position:fixed; width: 100%; height: 100%; z-index: 0!important;"></div>
+			<div id="particles-js" style="position:fixed; width: 100%; height: 100%;"></div>
+			<div class="landingpage">
+				<button type="button" class="box menubutton" id="button-enterpage">Enter Website</button>
+				
+			</div>
+			
+			<input oninput="volumeUpdate(this.value)" type="range" value="50" min="0" max="100" oninput="rangevalue.value=value" id="volume-control"/>
+			
 			<div class="layout-whole-page">
 				<div class="layout-left-side">
 				
@@ -48,8 +53,8 @@
 					
 						<div class="box introduction">
 							<div class="introduction-text">
-								<h1 align="center">Hi, I’m Emily ♡</h1>
-								<p>I’m a silly autistic deer on the internet 
+								<h1 align="center">Hi, I'm Emily ♡</h1>
+								<p>I'm a silly autistic deer on the internet 
 								who is very passionate about art, design and 3d 
 								modelling. Thanks for checking out my website!
 								<br><br>
@@ -57,9 +62,9 @@
 								and other stuff.</p>
 								
 								<div style="margin-top: 30px;" align="center">
-									<a target="_blank" href="" class="social_icon tooltip"> 
+									<a onclick="copyToClipBoard()" class="social_icon tooltip"> 
 										<span class="fab fa-discord fa-fw "></span> 
-										<span class="tooltiptext">emily ♡#3634</span> 
+										<span class="tooltiptext discord_copy">emily ♡#3634</span> 
 									</a>
 									<a target="_blank" href="https://twitter.com/cakeehUwU" class="social_icon tooltip"> 
 										<span class="fab fa-twitter fa-fw "></span> 
@@ -84,9 +89,13 @@
 								</div>
 							</div>
 							<div class="introduction-img">
+								<map name="image-map">
+									<area target="_blank" onclick="clicksqueak()" href="_blank" 
+									coords="1137,2046,1065,1621,1021,1599,1099,1002,1045,1019,938,1243,632,1054,714,935,793,961,780,1019,889,1073,1014,820,1027,560,947,395,1023,401,1113,245,1269,166,1515,338,1542,444,1511,517,1537,712,1573,945,1551,980,1667,1271,1759,1278,1757,1367,1667,1365,1598,1474,1642,1579,1566,1595,1533,2045,1359,2045,1303,1633,1280,2045" shape="poly">
+								</map>
 								<img src="./assets/personal/hello_transparent.png"
-								id="img-hello_transparent"
-								align="right">
+								id="img-hello_transparent" align="right" usemap="#image-map">
+								
 							</div>
 							
 						</div>
@@ -119,19 +128,25 @@
 							</div>
 							
 							<div class="aboutmecontent">
-								<div style="display: flex">
-									<img style="width: 1.5em;vertical-align: middle; cursor: text;
-										"src="./assets/social_icons/trans.svg">
-									<h2>&nbsp;Pronouns</h2>
-								</div>
+								<h2>🏳️‍⚧️ Pronouns</h2>
 								<p>she/her</p>
 							</div>
 							
+							<div class="aboutmecontent">
+								<h2>🌍 Country</h2>
+								<p>🇩🇪 Germany</p>
+							</div>
+
 							<div class="aboutmecontent">
 								<h2>✨ Interests</h2>
 								<p>3D modelling, drawing, video editing, gaming, and spending time with my gf <3</p>
 							</div>
 							
+							<div class="aboutmecontent">
+								<h2>🐾 favorite animal</h2>
+								<p>Deer 🦌 💖</p>
+							</div>
+
 						</div>
 					</div>
 <!-- ################################################################################# -->
@@ -156,9 +171,29 @@
 									<p class="menubutton-content">My Portfolio</p>
 								</a>
 							</div>
+							<div class="menubutton">
+								<a href="#credits"> <p class="menubutton-content" id="button-credits">Credits/Info</p> </a>
+							</div>
 						</div>
 					</div>
-				</div>
+
+					<div class="layout-right-credits">
+						<div class="box layout-right-contents">
+							<h1 align="center" id="credits">Credits / Info</h1>
+							<p>
+								🎵 Music/Sounds created by <i id="tobyfox">Toby Fox</i>
+								<br><br>
+								🅱 Icons by <a href="https://fontawesome.com" target="_blank" class="link">Font Awesome</a>
+								<br><br>
+								👍 Emojis: <a href="https://twemoji.twitter.com" target="_blank" class="link">Twemoji</a>  by Twitter
+								<br><br>
+								✨Particles by <a href="https://vincentgarreau.com/particles.js/" target="_blank" class="link">particles.js</a>
+							</p>
+							
+						</div>
+					</div>
+
+				 </div> <!-- layout right side closing -->
 			</div>
 
 
