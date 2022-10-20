@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+:root {
+	--sidebar_move_dur: .5s; /* duration it takes for sidebar to disappear */
+	--sidebar_width: 250px;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: 'DM Sans', sans-serif;
+	background-color: var(--deer-dark);
+	transition-duration: .2s;	
+}
+main {/* 	uncomment when I make the sidebar extend to the bottom of the page properly */
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+	color: var(--deer-bright);
+}
+
+h1 {font-size: 64px;}
+p {font-size: 24px;}
+li {list-style: none;}
+
+
+section > div > p {
+	text-align: left;
+	font-size: 20px;
+}
+
+.material-symbols-outlined {
+	color:var(--deer-bright);
+	font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 48;
+	scale: 48px;
+	user-select: none; /* make it unselectable */
+}
+
+.flex_container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+.main { /* this is the main content styling */
+  display: flex;
+  height:100%;
+  flex-grow: 1;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* ################################################ */
+.sidebar { /* this is the sidebar styling */ 
+  display: flex;
+  height: auto;
+  width: var(--sidebar_width);
+  flex-direction: column;
+  transition: width var(--sidebar_move_dur);
+  background-color: var(--deer-sidebar);
+  justify-content: center;
+  
+}
+
+.sidebar_content {
+	width: var(--sidebar_width);
+	transition: transform var(--sidebar_move_dur);
+	position: fixed;
+}
+
+.sidebar_list {
+	text-align: center;
+	font-size: 24px;
+}
+
+.sidebar.hidden {
+  width: 0; /* when the sidebar is hidden, make the width 0 so it slides out smoothly */
+}
+
+.sidebar.hidden .sidebar_content {
+  transform: translateX(-100%); /* moves the sidebar content out to the left along with the sidebar itself */
+}
+.sidebar_button {
+	display: flex;
+	margin: 0 20px;
+	position: fixed;
+}
+#themebutton_div {
+	margin-top: 20vh;
+	background-color: #ffffff26;
+}
+#sidebar_button_div {
+	/* display:flex;
+	flex-direction: column;
+	justify-content: center; */
+	margin-top: 50vh;
+	/* left: 250px; */
+}
+/* ################################################ */
+.blogpost {
+	width: 65vw;
+}
+
+.flex-blogpost {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: start;
+  align-content: start;
+  margin: 30px 0;
+}
+
+.blogpost_img {
+	max-height: 300px;
+	border-radius: 15px;
+}
+.blogpost_text_div {
+	width: 100%;
+}
+/* ################################################ */
+.zoom {
+  /* transform: scale(1,1); */
+  transition: transform .2s;
+  display: inline-block;
+}
+.zoom:hover {
+	transform: scale(1.3);
+}
+/* ################################################ */

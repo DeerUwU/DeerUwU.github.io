@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+:root{
+}
+
+body {
+	margin: 0;
+	font-family: 'DM Sans', sans-serif;
+	background-color: var(--deer-dark);
+}
+h1 {
+	font-size: 75px;
+	color: var(--deer-bright);
+}
+h4 {
+	font-size: 48px;
+	color: #FAF9E555;
+}
+p {
+	font-size: 24px;
+	color: var(--deer-bright);
+}
+
+span {
+	background-color: black;
+}
+li {
+	color: var(--deer-bright);
+	list-style: none;
+}
+
+
+
+.sidebar_list {
+	margin-left: 20px;
+	font-size: 24px;
+	width: 10vw;
+}
+
+.deer-fade, .links { 
+/* display block is there to limit where the hover works */
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: color;
+}
+.deer-fade:hover, .deer-fade:focus, .deer-fade:active,
+.links:hover, .links:focus, .links:active {
+	color: var(--deer-pink);
+}
+.links {
+	color: var(--deer-bright);
+	text-decoration: none;
+}
+
+
+.flex-container, .flex-container-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.flex-container-center {
+  justify-content: center;
+  
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 10vw;
+  margin-left: 0px;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 90vw;
+}
+
+#input_inches {
+	height: 50px;
+	
+	margin: 10px;
+	font-size: 24px;
+	font-family: 'DM Sans', sans-serif;
+	background-color: var(--deer-bright);
+	
+	border-radius: 10px;
+	/* border-width: 5px;
+	border-color: var(--deer-pink);
+	border-top-color: none ; */
+	outline: none;
+	
+	text-align:center;
+	transition-duration: 0.3s;
+	transition-property: border-radius;	
+}
+#input_inches:focus-visible	 {
+	border-radius: 20px;
+	outline:none!important;
+}
+#output_cm {
+	color: var(--deer-bright);
+	width: 100px;
+	text-align: left;
+}
+

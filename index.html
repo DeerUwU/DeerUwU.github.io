@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+
+		<title>Hiiiiii hai hii :)</title>
+		<link rel="icon" type="image/x-icon" href="./assets/deerbot_favicon.png">
+		
+		<meta property="og:image" content="./assets/personal/pfp_current.png">
+		<meta property="og:image:alt" content="deer logo"/>
+		<meta property="og:image:width" content="256">
+		<meta property="og:image:height" content="256">
+		<meta property="og:title" content="deer's personal page">
+		<meta property="og:description" content="Hi, thanks for checking out my stuff.">
+		<meta property="og:url" content="gallery_grid.html"/>
+		<meta property="og:type" content="website">
+		
+		
+		<link rel="stylesheet" href="./css/global.css">
+		<link rel="stylesheet" href="./css/homepage.css">
+		<script src="js/jquery-3.6.1.min.js"></script>
+		<!-- This retrieves the latest Twemoji script -->
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/f6593481b4.js" crossorigin="anonymous"></script>
+		<script> // Script to render emojis as Twemojis
+			window.onload = function() {    
+				// Parses the document body and inserts <img> tags in place of Unicode Emojis    
+				twemoji.parse(document.body, 
+						{folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
+				);
+			}
+		</script>
+		<!-- CSS configurations to tweak how the Twemojis are displayed -->
+		<style></style>
+		
+	</head>
+<!-- ################## layout left side ########################## -->
+	<body>
+		<main>
+			<div id="particles-js" style="position:fixed; width: 100%; height: 100%;"></div>
+			<div class="landingpage">
+				<button type="button" class="box menubutton" id="button-enterpage">Enter Website</button>
+				
+			</div>
+			
+			<input oninput="volumeUpdate(this.value)" type="range" value="50" min="0" max="100" oninput="rangevalue.value=value" id="volume-control"/>
+			
+			<div class="layout-whole-page">
+				<div class="layout-left-side">
+				
+					<div class="layout-left-introduction">
+					
+						<div class="box introduction">
+							<div class="introduction-text">
+								<h1 align="center">Hi, I'm Emily ♡</h1>
+								<p>I'm a silly autistic deer on the internet 
+								who is very passionate about art, design and 3d 
+								modelling. Thanks for checking out my website!
+								<br><br>
+								On here you can  find  some of my 2D art, 3D projects,
+								and other stuff.</p>
+								
+								<div style="margin-top: 30px;" align="center">
+									<a onclick="copyToClipBoard()" class="social_icon tooltip"> 
+										<span class="fab fa-discord fa-fw "></span> 
+										<span class="tooltiptext discord_copy">emily ♡#3634</span> 
+									</a>
+									<a target="_blank" href="https://twitter.com/cakeehUwU" class="social_icon tooltip"> 
+										<span class="fab fa-twitter fa-fw "></span> 
+										<span class="tooltiptext">@cakeehUwU</span> 
+									</a>
+									<a target="_blank" href="https://www.youtube.com/channel/UC5KOJFGyA1CibGtesnLjMdA" class="social_icon tooltip"> 
+										<span class="fab fa-youtube fa-fw "></span> 
+										<span class="tooltiptext">Cakeeh</span> 
+									</a>
+									<a target="_blank" href="https://steamcommunity.com/id/DeerUwU/" class="social_icon tooltip"> 
+										<span class="fab fa-steam fa-fw "></span> 
+										<span class="tooltiptext">Deer ♡</span> 
+									</a>
+									<a target="_blank" href="https://www.artstation.com/cakeeh" class="social_icon tooltip"> 
+										<span class="fab fa-artstation fa-fw "></span> 
+										<span class="tooltiptext">Cakeeh</span> 
+									</a>
+									<a target="_blank" href="https://t.me/cakeeh" class="social_icon tooltip"> 
+										<span class="fab fa-telegram fa-fw "></span> 
+										<span class="tooltiptext">Deer ♡</span> 
+									</a>
+								</div>
+							</div>
+							<div class="introduction-img">
+								<map name="image-map">
+									<area target="_blank" onclick="clicksqueak()" href="_blank" 
+									coords="1137,2046,1065,1621,1021,1599,1099,1002,1045,1019,938,1243,632,1054,714,935,793,961,780,1019,889,1073,1014,820,1027,560,947,395,1023,401,1113,245,1269,166,1515,338,1542,444,1511,517,1537,712,1573,945,1551,980,1667,1271,1759,1278,1757,1367,1667,1365,1598,1474,1642,1579,1566,1595,1533,2045,1359,2045,1303,1633,1280,2045" shape="poly">
+								</map>
+								<img src="./assets/personal/hello_transparent.png"
+								id="img-hello_transparent" align="right" usemap="#image-map">
+								
+							</div>
+							
+						</div>
+					</div>
+					<!-- ################################# -->
+					<div class="layout-left-menu">
+					
+						<a href="#aboutme"> <button type="button" class="box menubutton" id="button-aboutme">About Me</button> </a>
+						<a href="#2d_art"> <button type="button" class="box menubutton" id="button-2d_art">2D art</button> </a>
+						<a href="#3d_projects"> <button type="button" class="box menubutton" id="button-3d_projects">3d projects</button> </a>
+						<a href="#misc_pages"> <button type="button" class="box menubutton" id="button-misc_pages">misc pages</button> </a>
+						
+					</div>
+				</div>
+				
+<!-- #################### layout right side ####################### -->				
+				<div class="layout-right-side">
+					<div class="layout-right-aboutme">
+						<div class="box layout-right-contents" >
+							<h1 align="center" id="aboutme">About Me</h1>
+							
+							<div class="aboutmecontent">
+								<h2>🔢 Age</h2>
+								<p>19 years</p>
+							</div>
+							
+							<div class="aboutmecontent">
+								<h2>🍰 Birthday</h2>
+								<p>August 1st, 2003</p>
+							</div>
+							
+							<div class="aboutmecontent">
+								<h2>🏳️‍⚧️ Pronouns</h2>
+								<p>she/her</p>
+							</div>
+							
+							<div class="aboutmecontent">
+								<h2>🌍 Country</h2>
+								<p>🇩🇪 Germany</p>
+							</div>
+
+							<div class="aboutmecontent">
+								<h2>✨ Interests</h2>
+								<p>3D modelling, drawing, video editing, gaming, and spending time with my gf <3</p>
+							</div>
+							
+							<div class="aboutmecontent">
+								<h2>🐾 favorite animal</h2>
+								<p>Deer 🦌 💖</p>
+							</div>
+
+						</div>
+					</div>
+<!-- ################################################################################# -->
+					<div class="layout-right-2d_art">
+						<div class="box layout-right-contents">
+							<h1 align="center" id="2d_art">My Art</h1>
+						</div>
+					</div>
+					
+					<div class="layout-right-3d_projects">
+						<div class="box layout-right-contents">
+							<h1 align="center" id="3d_projects">My 3d Projects</h1>
+						</div>
+					</div>
+					
+					<div class="layout-right-misc_pages">
+						<div class="box layout-right-contents">
+							<h1 align="center" id="misc_pages">Misc Pages</h1>
+							
+							<div class="menubutton">
+								<a href="https://cakeeh.graphics/portfolio">
+									<p class="menubutton-content">My Portfolio</p>
+								</a>
+							</div>
+							<div class="menubutton">
+								<a href="#credits"> <p class="menubutton-content" id="button-credits">Credits/Info</p> </a>
+							</div>
+						</div>
+					</div>
+
+					<div class="layout-right-credits">
+						<div class="box layout-right-contents">
+							<h1 align="center" id="credits">Credits / Info</h1>
+							<p>
+								🎵 Music/Sounds created by <i id="tobyfox">Toby Fox</i>
+								<br><br>
+								🅱 Icons by <a href="https://fontawesome.com" target="_blank" class="link">Font Awesome</a>
+								<br><br>
+								👍 Emojis: <a href="https://twemoji.twitter.com" target="_blank" class="link">Twemoji</a>  by Twitter
+								<br><br>
+								✨Particles by <a href="https://vincentgarreau.com/particles.js/" target="_blank" class="link">particles.js</a>
+							</p>
+							
+						</div>
+					</div>
+
+				 </div> <!-- layout right side closing -->
+			</div>
+
+
+		</main>
+	<script src="js/personal_page.js"></script>
+	<script src="js/particles.js"></script>
+	<script>particlesJS.load("particles-js", "js/particles.json", function(){
+		console.log("particles.json loaded uwu")
+	});</script>
+	</body>
+</html>
