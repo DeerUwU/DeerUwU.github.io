@@ -6,57 +6,6 @@
 --deer-sidebar: #1c1c1c;
 }
 /* ##################################################################*/
-@media only screen and (max-width: 1120px){
-	.aboutme{width: 80%!important;}
-	.modal_content {width: 70%!important;}
-	.modal_img_container {width: 60vw!important;}
-	
-	.grid-container {
-	display: flex!important;
-	flex-wrap: wrap!important;
-	align-content: center!important;
-	}
-}
-
-/* this is for phone screens only */
-@media only screen and (hover: none) and (pointer: coarse) {
-
-	.introduction {
-		width: 80%!important;
-		padding: 10px;
-	}
-	.aboutme{font-size: 14px!important;}
-	
-	.main-header {font-size: 48px!important;}
-	.modal-header {font-size: 32px!important;}
-	.modal_content {width: 85%!important;}
-	/* div inside .modal content that adds margin to the modal content*/
-	.modal_content  > div {margin: 0!important;}
-	.modal_img_container {width: 100%!important;}
-	p {font-size: 12px!important;}
-	
-	.grid-container {
-	padding: 40px 0!important;
-	gap: 15px!important;
-	}
-	.grid-container > div { /* for the individual grid items */
-		height: 180px!important; /* scales down grid tiles to fit */
-		width: 180px!important;
-	}
-	.captions { /* for the captions for each image */	
-		font-size: 14px!important;
-		line-height: 30px!important;
-	}
-	.rounded {
-		border: 2px solid var(--deer-bright)!important;
-	}
-}
-@media only screen and (hover: none) and (min-width:1080px) {
-	.grid-container {
-		display: grid!important;
-	}
-}
-/* ################################################################## */
 html, body {
 	margin: 0;
 	height: 100%;
@@ -327,9 +276,6 @@ video {border-radius: var(--radius);}
 	gap: 30px;
 }
 
-
-div.socials_flex {}
-
 .socials_flex > a {width: 64px;}
 
 .socials_logo {
@@ -347,3 +293,56 @@ div.socials_flex {}
 	width:60vw;
 	padding-bottom: 30px;
 }
+
+/* ################################################################## */
+@media only screen and (max-width: 1120px){
+	.aboutme{width: 80%!important;}
+	.modal_content {width: 70%!important;}
+	.modal_img_container {width: 60vw!important;}
+	
+	.grid-container {
+	display: flex!important;
+	flex-wrap: wrap!important;
+	align-content: center!important;
+	}
+}
+
+/* this is for phone screens only */
+@media only screen and (hover: none) and (pointer: coarse) {
+
+	.introduction {
+		width: 80%!important;
+		padding: 10px;
+	}
+	.aboutme{font-size: 14px!important;}
+	
+	.main-header {font-size: 48px!important;}
+	.modal-header {font-size: 32px!important;}
+	.modal_content {width: 85%!important;}
+	/* div inside .modal content that adds margin to the modal content*/
+	.modal_content  > div {margin: 0!important;}
+	.modal_img_container {width: 100%!important;}
+	p {font-size: 12px!important;}
+	
+	.grid-container {
+	padding: 40px 0!important;
+	gap: 15px!important;
+	}
+	.grid-container > div { /* for the individual grid items */
+		height: 180px!important; /* scales down grid tiles to fit */
+		width: 180px!important;
+	}
+	.captions { /* for the captions for each image */	
+		font-size: 14px!important;
+		line-height: 30px!important;
+	}
+	.rounded {
+		border: 2px solid var(--deer-bright)!important;
+	}
+}
+@media only screen and (hover: none) and (min-width:1080px) {
+	.grid-container {
+		display: grid!important;
+	}
+}
+/* ################################################################## */

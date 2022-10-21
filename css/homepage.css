@@ -37,9 +37,10 @@ p {
 	margin: 0;
 }
 
-span{border-radius: 0.25em; padding: 0.5em;}
+span{border-radius: 0.25em; padding: 0.5em;} /*responsible for the social icons*/
 
 img.emoji {
+	user-select: text;
 	width: 1em;
 	vertical-align: middle;
 	cursor: text;
@@ -49,6 +50,8 @@ img.emoji {
 a {
 	text-decoration: none;
 }
+
+i {cursor:pointer;}
 
 i, .underline, .link {
 	color:white;
@@ -60,6 +63,10 @@ i, .underline, .link {
 }
 i:hover, .underline:hover, .link:hover {text-decoration-color: #e54085;}
 
+.i-nostyle {
+	text-decoration: none;
+	font-style: normal;
+}
 /* ########################################################### */
 ::-webkit-scrollbar {
   width:2vw;
@@ -302,9 +309,6 @@ input[type="range"]::-ms-track {
 	padding: 15px;
 }
 /* ########################################################### */
-.layout-right-aboutme, .layout-right-credits  {
-	min-width: 400px;
-}
 .aboutmecontent {
 	padding: 15px 0;
 }
@@ -361,7 +365,16 @@ p.text-copied {
     width: 100%;
     cursor: default;
 }
-area, #tobyfox {cursor:pointer;}
+area {cursor:pointer;}
+
+#heartnote {
+	transform:scale(1);
+	transition: transform .5s;
+}
+#heartnote:hover {
+	transform:scale(1.5);
+	cursor:pointer;
+}
 
 /* ##################################################################*/
 @media only screen and (max-width: 1500px){
@@ -372,18 +385,33 @@ area, #tobyfox {cursor:pointer;}
 	.layout-left-side, .layout-right-side {
 	display: flex;
 	flex-direction: column;
-	width: 80vw;
+	width: 80%;
 	}
+	.layout-right-side {
+		width: 100%;
+	}
+
 	.layout-whole-page {align-items: center;}
 	
 	.introduction-img {align-items: center;}
 }
 
 @media only screen and (max-width: 940px){
+	:root{--box_padding: 12px;}
 	.introduction {
 		flex-direction: column;
 		align-items: center;
 	}
+	p {font-size: 16px;}
 	
 }
+/* phone screens only  */
+@media only screen and (hover: none) and (pointer: coarse) {
+	:root{--box_padding: 12px;}
+	.layout-left-side, .layout-right-side, .layout-right-aboutme {
+		width: fit-content;
+	}
+	span{padding: 0.3em;} /*responsible for the social icons*/
+}
+
 /* ##################################################################*/
