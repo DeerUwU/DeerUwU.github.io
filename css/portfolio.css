@@ -46,13 +46,13 @@ section {background: lightgray;	}
 
 img {user-select: none;}
 
-iframe {border-radius: var(--radius);}
+iframe {border-radius: var(--radius-m);}
 
-video {border-radius: var(--radius);}
+video {border-radius: var(--radius-m);}
 
 .rounded {
 	/* border-width: 4px; */
-	border-radius: var(--radius);
+	border-radius: var(--radius-m);
 	margin: 20px 0;
 	border: 3px solid var(--deer-bright);
 	color: var(--deer-bright);
@@ -90,7 +90,7 @@ video {border-radius: var(--radius);}
   color: white;
   background-color: #00000080;
   backdrop-filter: blur(8px);
-  border-radius: var(--radius);
+  border-radius: var(--radius-m);
   
   padding: 30px;
   z-index: 1;
@@ -151,14 +151,24 @@ video {border-radius: var(--radius);}
 }
 
 .captions { /* for the captions for each image */
-	position: relative;
+	position: absolute;
+	width: 100%;
 	color: white;
-	background-color: #00000065;	
-	font-size: 16px;
-	line-height: 50px;
+	background-color: #00000065;
 	backdrop-filter: blur(18px);
+	font-size: 16px;
+	padding: 15px 0;
+	z-index: 99;
+
+	/* line-height: 50px; */
+
+	
+	transition: all 0.3s;
+	transform: translateY(100%);
 	/* transition: transform .5s; */
-	/* transform: translateY(50px); */	
+}
+.grid-container > div:hover .captions {
+	transform: translateY(0%);
 }
 /* ################################################################## */
 .item1 {
@@ -220,7 +230,7 @@ video {border-radius: var(--radius);}
   margin: 5vh auto; /* 15% from the top and centered */
   padding: 20px;
   border: 2px solid #888;
-  border-radius: var(--radius);
+  border-radius: var(--radius-m);
   width: 60%; /* Could be more or less, depending on screen size */
 }
 
@@ -238,7 +248,7 @@ video {border-radius: var(--radius);}
 }
 
 .modal_img {
-	border-radius: var(--radius);
+	border-radius: var(--radius-m);
 	max-width: 100%;
 	max-height: 60vh;
 	margin: 0px 20px;

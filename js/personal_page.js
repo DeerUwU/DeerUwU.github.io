@@ -25,9 +25,10 @@ function copyToClipBoard() {
 	bg_music.volume = e.currentTarget.value / 100;
 	}) */
 //################## sound effects ########################################
-const snd_squeak = new Audio("./assets/personal/sound/squeak.mp3");
+const snd_squeak = new Audio("./assets/personal/sound/snd_movemenu.wav");
 const snd_bark = new Audio("./assets/personal/sound/snd_pombark.wav");
 const snd_heart = new Audio("./assets/personal/sound/snd_pombark.wav");
+const snd_sparkle = new Audio("./assets/personal/sound/mus_sfx_eyeflash.wav");
 const bg_music = new Audio("./assets/personal/sound/noelle_ferriswheel.ogg");
 const heartNotes = [
   "./assets/personal/sound/mus_note1.wav",
@@ -75,16 +76,23 @@ function clickbark() {
   const snd_bark_copy = snd_bark.cloneNode(); //copies the sound so it can overlap
   snd_bark_copy.play();
 }
+function clicksparkle() {
+  const snd_sparkle_copy = snd_sparkle.cloneNode(); //copies the sound so it can overlap
+  snd_sparkle_copy.volume = 0.5;
+  snd_sparkle_copy.play();
+}
+// $("img[alt='✨']").click(function () {
+//   const snd_sparkle_copy = snd_sparkle.cloneNode(); //copies the sound so it can overlap
+//   snd_sparkle_copy.play();
+// });
 function clickheart() {
   console.log("heart clicked!");
   
-  // console.log(`heartnotes length: ${heartNotes.length}`)
   let snd_randomnote = new Audio(heartNotes[Math.floor(Math.random() * heartNotes.length)]);
-  
   let snd_randomnote_copy = snd_randomnote.cloneNode(); //copies the sound so it can overlap
   snd_randomnote_copy.play();
-  console.log(`rdm number: ${Math.floor(Math.random() * heartNotes.length)}`)
 }
+
 //################## adjust volume ########################################
 let volume = document.querySelector("#volume-control");
 function volumeUpdate(e) {
@@ -116,33 +124,43 @@ $(document).ready(function () {
   $("#button-aboutme").click(function () {
     window.location.href='#aboutme';
     $(".layout-right-aboutme").show();
-    $(".layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
+    $(".layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
   });
-  // ############################################
+  // ------------------------------------------------------------
   $("#button-2d_art").click(function () {
     window.location.href='#2d_art';
     $(".layout-right-2d_art").show();
-    $(".layout-right-aboutme, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
   });
-  // ############################################
+  // ------------------------------------------------------------
   $("#button-3d_projects").click(function () {
     window.location.href='#3d_projects';
     $(".layout-right-3d_projects").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-misc_pages, .layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
   });
-  // ############################################
+  // ------------------------------------------------------------
   $("#button-misc_pages").click(function () {
     window.location.href='#misc_pages';
     $(".layout-right-misc_pages").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-credits, .layout-right-deerbot").hide();
   });
-  // ############################################
+  // ------------------------------------------------------------
   $("#button-credits").click(function () {
     window.location.href='#credits';
     $(".layout-right-credits").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-deerbot").hide();
   });
-  // ############################################
+  // ------------------------------------------------------------
+  $("#button-deerbot").click(function () {
+    window.location.href='#deerbot';
+    $(".layout-right-deerbot").show();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
+  });
+  // ------------------------------------------------------------
+  $("#button-deerbot-invite").click(function () {
+    window.open("https://discordapp.com/oauth2/authorize?&client_id=673945530019217430&scope=bot&permissions=67620032", '_blank');
+  });
+  // ------------------------------------------------------------
   $("#button-enterpage").click(function () {
     const fadeout = [{ opacity: "1", easing: "ease-in-out" }, { opacity: "0" }];
     const fadeoutTiming = {
@@ -173,6 +191,7 @@ $(document).ready(function () {
 
     $(".landingpage").hide(500);
   });
+  
   // ############################################
   // $("#img-hello_transparent").click(function () {
   //   const snd_squeak_copy = snd_squeak.cloneNode(); //copies the sound so it can overlap

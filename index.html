@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-
-		<title>Hiiiiii hai hii :)</title>
-		<link rel="icon" type="image/x-icon" href="./assets/deerbot_favicon.png">
-		
-		<meta property="og:image" content="https://deeruwu.github.io/assets/personal/pfp_current.png">
-		<meta property="og:image:alt" content="deer logo"/>
-		<meta property="og:image:width" content="256">
-		<meta property="og:image:height" content="256">
-		<meta property="og:title" content="deer's personal page">
-		<meta property="og:description" content="Hi, thanks for checking out my stuff.">
-		<meta property="og:url" content="gallery_grid.html"/>
-		<meta property="og:type" content="website">
-		
-		
-		<link rel="stylesheet" href="./css/global.css">
-		<link rel="stylesheet" href="./css/homepage.css">
-		<script src="js/jquery-3.6.1.min.js"></script>
-		<!-- This retrieves the latest Twemoji script -->
-		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-		<script src="https://kit.fontawesome.com/f6593481b4.js" crossorigin="anonymous"></script>
-		<script> // Script to render emojis as Twemojis
-			window.onload = function() {    
-				// Parses the document body and inserts <img> tags in place of Unicode Emojis    
-				twemoji.parse(document.body, 
-						{folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
-				);
-			}
-		</script>
-		<!-- CSS configurations to tweak how the Twemojis are displayed -->
-		<style></style>
-		
-	</head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	
+	<title>Hiiiiii hai hii :)</title>
+	<link rel="icon" type="image/x-icon" href="./assets/deerbot_favicon.png">
+	
+	<meta property="og:image" content="https://deeruwu.github.io/assets/personal/pfp_current.png">
+	<meta property="og:image:alt" content="deer logo"/>
+	<meta property="og:image:width" content="256">
+	<meta property="og:image:height" content="256">
+	<meta property="og:title" content="deer's personal page">
+	<meta property="og:description" content="Hi, thanks for checking out my stuff.">
+	<meta property="og:url" content="gallery_grid.html"/>
+	<meta property="og:type" content="website">
+	
+	
+	<link rel="stylesheet" href="./css/global.css">
+	<link rel="stylesheet" href="./css/homepage.css">
+	<script src="js/jquery-3.6.1.min.js"></script>
+	<!-- This retrieves the latest Twemoji script -->
+	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/f6593481b4.js" crossorigin="anonymous"></script>
+	<script> // Script to render emojis as Twemojis
+		window.onload = function() {    
+			// Parses the document body and inserts <img> tags in place of Unicode Emojis    
+			twemoji.parse(document.body, 
+			{folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
+			);
+		}
+	</script>
+	<!-- CSS configurations to tweak how the Twemojis are displayed -->
+	<style></style>
+	
+</head>
 <!-- ################## layout left side ########################## -->
-	<body>
-		<main>
-			<div id="particles-js" style="position:fixed; width: 100%; height: 100%;"></div>
-			<div class="landingpage">
-				<button type="button" class="box menubutton" id="button-enterpage">Enter Website</button>
-				
-			</div>
+<body>
+	<main>
+		<div id="particles-js" style="position:fixed; width: 100%; height: 100%;"></div>
+		<div class="landingpage">
+			<button type="button" class="box menubutton" id="button-enterpage">Enter Website</button>
 			
-			<input oninput="volumeUpdate(this.value)" type="range" value="50" min="0" max="100" oninput="rangevalue.value=value" id="volume-control"/>
-			
-			<div class="layout-whole-page">
-				<div class="layout-left-side">
+		</div>
+		
+		<input oninput="volumeUpdate(this.value)" 
+		type="range" value="50" min="0" max="100" 
+		oninput="rangevalue.value=value" 
+		id="volume-control"/>
+		
+		<div class="layout-whole-page">
+			<div class="layout-left-side">
 				
-
-					
-					<div class="box layout-left-introduction">
-						<div class="introduction-text">
-							<h1 align="center">Hi, I'm Emily ♡</h1>
-							<p>I'm a silly autistic deer on the internet 
+				
+				
+				<div class="box layout-left-introduction">
+					<div class="introduction-text">
+						<h1 align="center">Hi, I'm Emily ♡</h1>
+						<p>I'm a silly autistic deer on the internet 
 							who is very passionate about art, design and 3d 
 							modelling. Thanks for checking out my website!
 							<br><br>
@@ -110,7 +113,7 @@
 					</div>
 				</div>
 				
-<!-- #################### layout right side ####################### -->				
+				<!-- #################### layout right side ####################### -->				
 				<div class="layout-right-side">
 					<div class="layout-right-aboutme">
 						<div class="box layout-right-contents" >
@@ -120,7 +123,7 @@
 								<h2>📃 Aliases</h2>
 								<p>Cakeeh / Emily ♡ / Deer ♡</p>
 							</div>
-
+							
 							<div class="aboutmecontent">
 								<h2>🔢 Age</h2>
 								<p>19 years</p>
@@ -140,14 +143,21 @@
 								<h2>🌍 Country</h2>
 								<p>🇩🇪 Germany</p>
 							</div>
-
+							
 							<div class="aboutmecontent">
 								<h2>📏 Height</h2>
 								<p>5'5 ft (168 cm)</p>
 							</div>
-
+							
 							<div class="aboutmecontent">
-								<h2>✨ Interests</h2>
+								<!-- <h2>✨ Interests</h2> -->
+								<div style="display:flex">
+									<img draggable="false" onclick="clicksparkle()" 
+									id="sparkles" class="emoji" alt="✨" 
+									src="https://twemoji.maxcdn.com/v/14.0.2/svg/2728.svg">
+									<h2>&nbsp;Interests</h2>
+								</div>
+
 								<p>3D modelling, drawing, video editing, gaming, and spending time with my gf <3</p>
 							</div>
 							
@@ -155,94 +165,232 @@
 								<h2>🐾 favorite animal</h2>
 								<p>Deer 🦌 💖</p>
 							</div>
-
+							
 						</div>
 					</div>
-<!-- ################################################################################# -->
+					<!-- ################################################################################# -->
 					<div class="layout-right-2d_art">
 						<div class="box layout-right-contents">
 							<h1 align="center" id="2d_art">My Art</h1>
-							<p>I'll be honest i'm not very proud of my own art
-							so i wont post much of it.</p>
-
+							<p style="text-align: center">I'll be honest i'm not very proud of my own art
+								so i wont post much of it.</p>
+								
+								
 							<div class="gallery-container"> <!-- gallery div placeholder for now -->
+
 								<div class="gallery-tile">
-									<img  src="./assets/personal/2d art/hello twitter 2k.png" alt="hello twitter">
-									<p>Hello Twitter</p>
+									<div>
+										<div class=".gallery-img-div">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/hello twitter 2k.png">
+										</div>
+										<p class="gallery-caption">hello birdapp</p>
+									</div>
+								</div>
+								
+								<div class="gallery-tile">
+									<div>
+										<div class=".gallery-img-div">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/june_bench.png">
+										</div>
+										<p class="gallery-caption">June on the bench</p>
+									</div>
 								</div>
 
 								<div class="gallery-tile">
-									<img  src="./assets/personal/2d art/june_bench.png" alt="june bench">
-									<p>June Bench</p>
+									<div>
+										<div class=".gallery-img-div">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/current.png">
+										</div>
+										<p class="gallery-caption">current pfp meow</p>
+									</div>
 								</div>
 
 								<div class="gallery-tile">
-									<img  src="./assets/personal/2d art/current.png" alt="my current pfp">
-									<p>my current pfp</p>
+									<div>
+										<div class=".gallery-img-div">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/dhtghfghfgh.jpeg">
+										</div>
+										<p class="gallery-caption">vent art</p>
+									</div>
+								</div>
+
+							</div> <!-- end gallery container  -->
+								
+								
+							</div>
+						</div>
+						
+						<div class="layout-right-3d_projects">
+							<div class="box layout-right-contents">
+								<h1 align="center" id="3d_projects">My 3d Projects</h1>
+								<p style="text-align: center">here are some of my 3d projects :3</p>
+
+								<div class="gallery-container"> <!-- gallery div placeholder for now -->
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/bunny_final.png">
+											</div>
+											<p class="gallery-caption">Bnuyy</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/fishtank v4.jpg">
+											</div>
+											<p class="gallery-caption">underwater aquarium</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/hl2_forest_vid_thumbnail.jpg">
+											</div>
+											<p class="gallery-caption">HL2 Forest Scene</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/king.png">
+											</div>
+											<p class="gallery-caption">king</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/wii remote pink.png">
+											</div>
+											<p class="gallery-caption">Wii Remote</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/winchester_model_1886.png">
+											</div>
+											<p class="gallery-caption">Winchester Model 1886</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/coobs.gif">
+											</div>
+											<p class="gallery-caption">cubesh</p>
+										</div>
+									</div>
+
+									<div class="gallery-tile">
+										<div>
+											<div class=".gallery-img-div">
+												<img loading="lazy" alt="alt" src="./assets/3d/toothbrush.jpg">
+											</div>
+											<p class="gallery-caption">toot brush</p>
+										</div>
+									</div>
+									
+									
+	
+								</div> <!-- end gallery container  -->
+							</div>
+						</div>
+						
+						<div class="layout-right-misc_pages">
+							<div class="box layout-right-contents" align="center">
+								<h1 align="center" id="misc_pages">Misc Pages</h1>
+								<p style="text-align:left;font-size: 16px;color: rgba(255, 255, 255, 0.75);">
+									(scrolling might be buggy if you scroll in an area with no divs. maybe i'll fix that
+									eventually.) and yes i'll add a large gallery mode for the image galleries soon dw.
+									<br><br>
+									this website is still very much wip but i hope you like it anyways.
+									I'll totally add more silly secrets and uh content and maybe ... thingies yeah.
+									thanks for being here ❤ uwu)
+								</p>
+								
+								<div class="menubutton">
+									<a href="https://cakeeh.graphics/portfolio" target="_blank">
+										<p class="menubutton-content">My Portfolio</p>
+									</a>
+								</div>
+								
+								<div class="menubutton">
+									<p class="menubutton-content" id="button-credits">Credits/Info</p>
+								</div>
+								
+								<div class="menubutton">
+									<p class="menubutton-content" id="button-deerbot">Deerbot - Discord Bot</p>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="layout-right-credits">
+							<div class="box layout-right-contents">
+								<h1 align="center" id="credits">Credits / Info</h1>
+								<p>
+									🎵 Music/Sounds created by <i id="" onclick="clickbark()">Toby Fox</i>
+									<br><br>
+									🅱 Icons by <a href="https://fontawesome.com" target="_blank" class="link">Font Awesome</a>
+									<br><br>
+									👍 Emojis: <a href="https://twemoji.twitter.com" target="_blank" class="link">Twemoji</a>  by Twitter
+									<br><br>
+									✨ Particles by <a href="https://vincentgarreau.com/particles.js/" target="_blank" class="link">particles.js</a>
+									<br><br><br>
+								</p>
+								<p style="text-align:center;font-size: 14px;color: rgba(255, 255, 255, 0.75);">Website made with love <i class="i-nostyle"><img draggable="false" onclick="clickheart()" id="heartnote" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/v/14.0.2/svg/2764.svg"></i></p>
+							</div>
+						</div>
+						
+						<div class="layout-right-deerbot">
+							<div class="box layout-right-contents" align="center">
+								<h1 align="center" id="deerbot">My Discord Bot!</h1>
+								<div align="center">
+									<div class="deerbot-box">
+										<img src="./assets/deerbot_favicon.png" alt="deerbot logo">
+										<div style="flex-direction: column;">
+											<h2 style="font-weight: 400;text-align: left;">Deer Bot</h2>
+											<p style="color:rgba(255, 255, 255, 0.75)"> playing: 🍞 commands for info</p>
+										</div>
+										
+									</div>
+								</div>
+								<p>
+									This is my discord bot, Deer Bot. It's a silly little gimick
+									bot with features like 8ball, fortune cookie fortunes, and 
+									he can generate random facts about users! Please give this
+									silly noodle a try!
+								</p>
+								<div align="center" style="display:flex;width:50%">
+									<button type="button" class="box menubutton" id="button-deerbot-invite">ughh fine, i guess you are my little discord bot. come here</button>
 								</div>
 							</div>
 						</div>
+						
+					</div> <!-- layout right side closing -->
+				</div>
+				<!-- <div class="layout-egg" align="center">
+					<div class="box layout-egg-content">
+						<h1 align="center">I wonder what this is about?</h1>
+						<p>only time will tell...</p>
 					</div>
-					
-					<div class="layout-right-3d_projects">
-						<div class="box layout-right-contents">
-							<h1 align="center" id="3d_projects">My 3d Projects</h1>
-							<p>I-I'll add something soon, promised!!</p>
-						</div>
-					</div>
-					
-					<div class="layout-right-misc_pages">
-						<div class="box layout-right-contents" align="center">
-							<h1 align="center" id="misc_pages">Misc Pages</h1>
-							<p style="text-align:left;font-size: 16px;color: rgba(255, 255, 255, 0.75);">
-								(scrolling might be buggy on desktop, try putting the cursor on 
-								one of the boxes. alternatively use middle click scrolling. this is some thingy 
-								with the particle background. I'll fix it soon. 
-								Clicking on the background where it doesnt scroll spawns more particles but i might 
-								have to remove it since scrolling is kinda more important i think.
-								<br><br>
-								this website is still very much wip but i hope you like it anyways.
-								I'll totally add more silly secrets and uh content and maybe ... thingies yeah.
-								thanks for being here uwu)
-							</p>
-							
-							<div class="menubutton">
-								<a href="https://cakeeh.graphics/portfolio" target="_blank">
-									<p class="menubutton-content">My Portfolio</p>
-								</a>
-							</div>
-							<div class="menubutton">
-								<p class="menubutton-content" id="button-credits">Credits/Info</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="layout-right-credits">
-						<div class="box layout-right-contents">
-							<h1 align="center" id="credits">Credits / Info</h1>
-							<p>
-								🎵 Music/Sounds created by <i id="" onclick="clickbark()">Toby Fox</i>
-								<br><br>
-								🅱 Icons by <a href="https://fontawesome.com" target="_blank" class="link">Font Awesome</a>
-								<br><br>
-								👍 Emojis: <a href="https://twemoji.twitter.com" target="_blank" class="link">Twemoji</a>  by Twitter
-								<br><br>
-								✨ Particles by <a href="https://vincentgarreau.com/particles.js/" target="_blank" class="link">particles.js</a>
-								<br><br><br>
-							</p>
-							<p style="text-align:center;font-size: 14px;color: rgba(255, 255, 255, 0.75);">Website made with love <i class="i-nostyle"><img draggable="false" onclick="clickheart()" id="heartnote" class="emoji" alt="❤" src="https://twemoji.maxcdn.com/v/14.0.2/svg/2764.svg"></i></p>
-						</div>
-					</div>
-
-				 </div> <!-- layout right side closing -->
-			</div>
-
-
-		</main>
-	<script src="js/personal_page.js"></script>
-	<script src="js/particles.js"></script>
-	<script>particlesJS.load("particles-js", "js/particles.json", function(){
-		console.log("particles.json loaded uwu")
-	});</script>
-	</body>
-</html>
+				</div> -->
+				
+				
+			</main>
+			<script src="js/personal_page.js"></script>
+			<script src="js/particles.js"></script>
+			<script>particlesJS.load("particles-js", "js/particles.json", function(){
+				console.log("particles.json loaded uwu")
+			});</script>
+		</body>
+		</html>
