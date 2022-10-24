@@ -114,43 +114,33 @@ rangeInputs.forEach((input) => {
 
 $(document).ready(function () {
   $("#button-aboutme").click(function () {
+    window.location.href='#aboutme';
     $(".layout-right-aboutme").show();
-    $(".layout-right-2d_art").hide();
-    $(".layout-right-3d_projects").hide();
-    $(".layout-right-misc_pages").hide();
-    $(".layout-right-credits").hide();
+    $(".layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
   });
   // ############################################
   $("#button-2d_art").click(function () {
-    $(".layout-right-aboutme").hide();
+    window.location.href='#2d_art';
     $(".layout-right-2d_art").show();
-    $(".layout-right-3d_projects").hide();
-    $(".layout-right-misc_pages").hide();
-    $(".layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
   });
   // ############################################
   $("#button-3d_projects").click(function () {
-    $(".layout-right-aboutme").hide();
-    $(".layout-right-2d_art").hide();
+    window.location.href='#3d_projects';
     $(".layout-right-3d_projects").show();
-    $(".layout-right-misc_pages").hide();
-    $(".layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-misc_pages, .layout-right-credits").hide();
   });
   // ############################################
   $("#button-misc_pages").click(function () {
-    $(".layout-right-aboutme").hide();
-    $(".layout-right-2d_art").hide();
-    $(".layout-right-3d_projects").hide();
+    window.location.href='#misc_pages';
     $(".layout-right-misc_pages").show();
-    $(".layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-credits").hide();
   });
   // ############################################
   $("#button-credits").click(function () {
-    $(".layout-right-aboutme").hide();
-    $(".layout-right-2d_art").hide();
-    $(".layout-right-3d_projects").hide();
-    $(".layout-right-misc_pages").hide();
+    window.location.href='#credits';
     $(".layout-right-credits").show();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages").hide();
   });
   // ############################################
   $("#button-enterpage").click(function () {

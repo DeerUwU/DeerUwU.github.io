@@ -21,6 +21,7 @@ body, html {
 	rgba(59,38,87,1) 100%)
 	no-repeat fixed center;	
 	
+	transition-duration: .5s;
 }
 
 h1 {color: var(--deer_red);} 
@@ -47,9 +48,7 @@ img.emoji {
 }
 
 
-a {
-	text-decoration: none;
-}
+a {text-decoration: none;}
 
 i {cursor:pointer;}
 
@@ -191,43 +190,50 @@ input[type="range"]::-ms-track {
 .layout-whole-page {
 	display: flex;
 	flex-direction: row;
-	height: 100%;
-	overflow: hidden;
 	align-items: flex-start;
+	overflow: hidden; 
+
+	height: 100%;
+	width: 100%;
 }
 .layout-left-side, .layout-right-side {
 	display: flex;
 	flex-direction: column;
-	width: 50vw;
 	align-items: center;
 	justify-content: center;
-}
-.layout-right-side {flex-direction: row;}
 
-.layout-left-side, .layout-right-side, .layout-left-introduction, 
-.layout-left-menu, .layout-right-aboutme, .layout-right-2d_art,
-.layout-right-3d_projects, .layout-right-misc_pages, .layout-right-contents {
-	padding: var(--box_padding);
-	z-index: 1;
+	width: 50vw; /* makes sure theyre both equally wide at 50% of the screen width */
+	padding: var(--box_padding); /* initial padding for left and right half */
+	z-index: 1; /* !!! remove this for final side so you can create particles freely */
 }
 
-/* .layout-right-aboutme, */ .layout-right-2d_art,
+
+
+/* make everything scale responsively */
+.layout-left-introduction, .layout-left-menu,
+.layout-right-aboutme, .layout-right-2d_art, 
+.layout-right-3d_projects, .layout-right-misc_pages,
+.layout-right-credits {
+	width: 100%; 
+}
+
+/* vvvv comment out the one that should show up at the start */
+/* .layout-right-aboutme, */.layout-right-2d_art,
 .layout-right-3d_projects, .layout-right-misc_pages,
 .layout-right-credits {
 	display: none;
 }
 
-.layout-right-aboutme {
-	width: 60%; 
-}
+.layout-right-contents {padding: var(--box_padding);}
 /* ########################################################### */
 
-.introduction {
+.layout-left-introduction { /*  this gets no padding so the image can sit at the bottom */
 	display: flex;
 	flex-direction: row;
 }
+
 .introduction-text {
-	padding: var(--box_padding);
+	padding: var(--box_padding) 0 var(--box_padding) var(--box_padding);
 }
 
 
@@ -236,14 +242,16 @@ input[type="range"]::-ms-track {
     margin: 0 auto;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
-	width: 80%;
+	justify-content: flex-end; /* positions image at bottom */
+	align-items: center; /* centers image horizontally */
+	/* width: 80%; */
 }
 #img-hello_transparent {
 	max-height: 300px;
 	max-width: 300px;
 	cursor: pointer;
-	transform-origin: 50% 100%;
+	/* vvv when clicking for squeaks it only transforms downwards */
+	transform-origin: 50% 100%; 
 }
 /* ########################################################### */
 .social_icon {
@@ -278,22 +286,24 @@ input[type="range"]::-ms-track {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* justify-content: center; */
 }
+
 .menubutton {
-	display: flex;
-	justify-content: center;
-	width: 40%;
-	min-width: 300px;
+	display: inline-block;
+    justify-content: center;
+    width: 50%;
+	min-width: fit-content;
+
 	border-radius: 500px;
 	margin: 12px 0;
-	cursor: pointer;   
-	transition-property: background, box-shadow;
+	 
+	transition-property: background-color, box-shadow;
 	transition-duration: 0.5s;
 	transition-timing-function: ease-out;
 }
 .menubutton:hover {
-	background: rgba(211, 35, 99, 0.5);
+	cursor: pointer;  
+	background-color: rgba(211, 35, 99, 0.5);
 	box-shadow: 5px 5px 0px 0px #460925c2;
 }
 .menubutton:active {
@@ -310,7 +320,7 @@ input[type="range"]::-ms-track {
 }
 /* ########################################################### */
 .aboutmecontent {
-	padding: 15px 0;
+	padding: 15px 0; /* padding above and below the about me things*/
 }
 
 /* ##################################################################*/
@@ -319,10 +329,7 @@ input[type="range"]::-ms-track {
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-.tooltiptext {
-	white-space: nowrap;
-
-}
+.tooltiptext {white-space: nowrap;}
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -357,14 +364,15 @@ input[type="range"]::-ms-track {
   visibility: visible;
   opacity: 1;
 }
-p.text-copied {
+/* p.text-copied {
     position: absolute;
     left: 0;
     top: 0;
 	z-index: 3;
     width: 100%;
     cursor: default;
-}
+} */
+/* ########################################################### */
 area {cursor:pointer;}
 
 #heartnote {
@@ -375,13 +383,39 @@ area {cursor:pointer;}
 	transform:scale(1.5);
 	cursor:pointer;
 }
+/* ##################### gallery for 2d art ######################### */
+/* temp */
+.layout-right-2d_art, .layout-right-3d_projects {
+	overflow: hidden;
+	max-height: fit-content;
+}
 
-/* ##################################################################*/
-@media only screen and (max-width: 1500px){
-	.layout-whole-page {
+.gallery-container {
 	display: flex;
 	flex-direction: column;
-	}
+	align-items: center;
+	width: 100%;
+}
+.gallery-tile {
+	width:fit-content;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 10px 0;
+	border-radius: var(--corner_radius);
+}
+
+.gallery-tile > img { /* image inside the tile */
+	border-radius: var(--corner_radius) var(--corner_radius) 0 0;
+	width:100%;	
+}
+.gallery-tile > p { /* caption inside the tile */
+	text-align: center;
+}
+/* ##################################################################*/
+@media only screen and (max-width: 1500px){
+	.layout-left-introduction {flex-direction: column;}
+	.introduction-text {padding: var(--box_padding);} /* evens out padding */
+	
+	/* 
 	.layout-left-side, .layout-right-side {
 	display: flex;
 	flex-direction: column;
@@ -393,25 +427,33 @@ area {cursor:pointer;}
 
 	.layout-whole-page {align-items: center;}
 	
-	.introduction-img {align-items: center;}
+	.introduction-img {align-items: center;} */
 }
 
-@media only screen and (max-width: 940px){
-	:root{--box_padding: 12px;}
-	.introduction {
+@media only screen and (max-width: 900px){
+	/* :root{--box_padding: 12px;} */
+	span{padding: 0.3em;} /* responsible for the social icons */
+
+	.layout-whole-page {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-	p {font-size: 16px;}
+	.layout-left-side, .layout-right-side {
+		width: fit-content;
+	}
 	
 }
 /* phone screens only  */
 @media only screen and (hover: none) and (pointer: coarse) {
 	:root{--box_padding: 12px;}
+
 	.layout-left-side, .layout-right-side, .layout-right-aboutme {
 		width: fit-content;
 	}
-	span{padding: 0.3em;} /*responsible for the social icons*/
+
+	p {font-size: 16px;}
+	span{padding: 0.3em;} /* responsible for the social icons */
 }
 
 /* ##################################################################*/
