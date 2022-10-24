@@ -204,7 +204,7 @@ input[type="range"]::-ms-track {
 
 	width: 50vw; /* makes sure theyre both equally wide at 50% of the screen width */
 	padding: var(--box_padding); /* initial padding for left and right half */
-	z-index: 1; /* !!! remove this for final side so you can create particles freely */
+	/*z-index: 1;*/ /* !!! remove this for final side so you can create particles freely */
 }
 
 
