@@ -306,7 +306,10 @@ video {border-radius: var(--radius-m);}
 
 /* ################################################################## */
 @media only screen and (max-width: 1120px){
-	.aboutme{width: 80%!important;}
+	.aboutme{
+		width: 80%;
+		font-size: 20px;
+	}
 	.modal_content {width: 70%!important;}
 	.modal_img_container {width: 60vw!important;}
 	
@@ -346,9 +349,14 @@ video {border-radius: var(--radius-m);}
 		font-size: 14px!important;
 		line-height: 30px!important;
 	}
-	.rounded {
-		border: 2px solid var(--deer-bright)!important;
+	.rounded {border: 2px solid var(--deer-bright)!important;}
+	
+	.captions {
+		transform: unset;
+		z-index: 0;
+		padding: 5px 0;
 	}
+
 }
 @media only screen and (hover: none) and (min-width:1080px) {
 	.grid-container {

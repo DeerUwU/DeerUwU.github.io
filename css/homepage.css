@@ -524,6 +524,10 @@ area {
   width: 64px;
   margin: 0 20px 0 0;
 }
+#deerbot-invite-div {
+	display:flex;
+	width:50%
+}
 #button-deerbot-invite {
   margin-top: 30px;
   font-size: 18px;
@@ -580,6 +584,7 @@ area {
     flex-direction: column;
     align-items: center;
   }
+  #deerbot-invite-div {width:80%} /* makes button wider again */
 }
 
 /* phone screens only  */
