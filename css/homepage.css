@@ -545,7 +545,7 @@ area {
   .layout-right-deerbot,
   .layout-right-credits,
   .layout-right-aboutme,
-  #deerbot-invite-div { /* it looks weird when its too wide */
+  #deerbot-invite-div {
     min-width: min-content;
     width: 80%;
   }
