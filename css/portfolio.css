@@ -164,7 +164,7 @@ video {border-radius: var(--radius-m);}
 
 	
 	transition: all 0.3s;
-	transform: translateY(100%);
+	transform: translateY(105%);
 	/* transition: transform .5s; */
 }
 .grid-container > div:hover .captions {
