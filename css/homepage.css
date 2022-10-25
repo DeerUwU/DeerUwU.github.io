@@ -538,20 +538,14 @@ area {
   .layout-left-introduction {
     flex-direction: column;
   }
-  .introduction-text {
-    padding: var(--box_padding);
-  } /* evens out padding */
+  .introduction-text {padding: var(--box_padding);} /* evens out padding */
 
-  .layout-right-aboutme {width: 80%;}
-
+  .layout-right-aboutme,
   .layout-right-misc_pages,
-  .layout-right-deerbot {/* it looks weird when its too wide */
-    min-width: min-content;
-    width: 80%;
-  }
+  .layout-right-deerbot,
   .layout-right-credits,
-  .layout-right-aboutme {
-    /* it looks weird when its too wide */
+  .layout-right-aboutme,
+  #deerbot-invite-div { /* it looks weird when its too wide */
     min-width: min-content;
     width: 80%;
   }
@@ -559,9 +553,7 @@ area {
 
 @media only screen and (max-width: 899px) {
   /* :root{--box_padding: 12px;} */
-  span {
-    padding: 0.3em;
-  } /* responsible for the social icons */
+  span {padding: 0.3em;} /* responsible for the social icons */
 
   .layout-left-side,
   .layout-right-side {
@@ -574,9 +566,7 @@ area {
     width: 100%;
   }
 
-  .gallery-container {
-    column-count: 2;
-  }
+  .gallery-container {column-count: 2;}
 }
 @media only screen and (max-width: 699px) {
   .layout-whole-page {
@@ -584,7 +574,7 @@ area {
     flex-direction: column;
     align-items: center;
   }
-  #deerbot-invite-div {width:80%} /* makes button wider again */
+  
 }
 
 /* phone screens only  */
@@ -601,12 +591,9 @@ area {
   /* this is to prevent volume slider from obstructing things*/
   .layout-right-side {margin-bottom: 40px;} 
 
-  p {
-    font-size: 16px;
-  }
-  span {
-    padding: 0.3em;
-  } /* responsible for the social icons */
+  p {font-size: 16px;}
+  span {padding: 0.3em;} /* responsible for the social icons */
+  #deerbot-invite-div {width:80%} /* makes button wider again */
 }
 
 /* ##################################################################*/

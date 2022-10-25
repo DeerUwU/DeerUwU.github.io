@@ -104,27 +104,12 @@ $(document).ready(function () {
   console.log(`ismobile = ${isMobile}`)
   
   if ((isMobile) || document.documentElement.clientWidth < 700) {
-    $("#button-aboutme").click(function () {
-      window.location.href='#aboutme';
-    });
-    $("#button-2d_art").click(function () {
-      window.location.href='#2d_art';
-    });
-    $("#button-3d_projects").click(function () {
-      window.location.href='#3d_projects';
-    });
-    $("#button-misc_pages").click(function () {
-      window.location.href='#misc_pages';
-    });
-    $("#button-credits").click(function () {
-      window.location.href='#credits';
-    });
-    $("#button-deerbot").click(function () {
-      window.location.href='#deerbot';
+    $("#button-aboutme, #button-2d_art, #button-3d_projects, #button-misc_pages, #button-credits, #button-deerbot").click(function () {
+      window.location.href='#layout-right-side';
     });
   } else {
     $("#button-aboutme, #button-2d_art, #button-3d_projects, #button-misc_pages, #button-credits, #button-deerbot").click(function () {
-      console.log("clicked while isnt mobile")
+      // console.log("clicked while isnt mobile")
       $("body").scrollTop(0);
     });
   }
