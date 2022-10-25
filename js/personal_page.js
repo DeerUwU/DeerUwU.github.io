@@ -19,11 +19,6 @@ function copyToClipBoard() {
     element.textContent = storage.value;
   }, 2000);
 }
-
-/* let volume = document.querySelector("#volume-control");
-	volume.addEventListener("change", function(e) {
-	bg_music.volume = e.currentTarget.value / 100;
-	}) */
 //################## sound effects ########################################
 const snd_squeak = new Audio("./assets/personal/sound/snd_movemenu.wav");
 const snd_bark = new Audio("./assets/personal/sound/snd_pombark.wav");
@@ -38,20 +33,6 @@ const heartNotes = [
   "./assets/personal/sound/mus_note5.wav",
   "./assets/personal/sound/mus_note6.wav",
 ];
-// $("#tobyfox").click(function () {
-//   console.log("bark clicked!")
-//   const snd_bark_copy = snd_bark.cloneNode(); //copies the sound so it can overlap
-//   snd_bark.play();
-// });
-
-// $("#heartnote").click(function () {
-//   console.log("heart clicked!")
-//   const heartNotes = ["./assets/personal/sound/mus_note1.wav", "./assets/personal/sound/mus_note2.wav", "./assets/personal/sound/mus_note3.wav", "./assets/personal/sound/mus_note4.wav", "./assets/personal/sound/mus_note5.wav", "./assets/personal/sound/mus_note6.wav"];
-//   snd_randomnote = new Audio(heartNotes[Math.floor(Math.random() * heartNotes.length)]);
-//   let snd_randomnote_copy = snd_randomnote.cloneNode(); //copies the sound so it can overlap
-//   snd_randomnote_copy.play();
-// });
-
 // ###########squish uwu ################
 const squish = [
   { transform: "scaleY(100%)", easing: "ease-in-out" },
@@ -73,23 +54,21 @@ function clicksqueak() {
 }
 
 function clickbark() {
-  const snd_bark_copy = snd_bark.cloneNode(); //copies the sound so it can overlap
+  const snd_bark_copy = snd_bark.cloneNode();
   snd_bark_copy.play();
 }
+
 function clicksparkle() {
-  const snd_sparkle_copy = snd_sparkle.cloneNode(); //copies the sound so it can overlap
+  const snd_sparkle_copy = snd_sparkle.cloneNode();
   snd_sparkle_copy.volume = 0.5;
   snd_sparkle_copy.play();
 }
-// $("img[alt='✨']").click(function () {
-//   const snd_sparkle_copy = snd_sparkle.cloneNode(); //copies the sound so it can overlap
-//   snd_sparkle_copy.play();
-// });
+
 function clickheart() {
   console.log("heart clicked!");
   
   let snd_randomnote = new Audio(heartNotes[Math.floor(Math.random() * heartNotes.length)]);
-  let snd_randomnote_copy = snd_randomnote.cloneNode(); //copies the sound so it can overlap
+  let snd_randomnote_copy = snd_randomnote.cloneNode();
   snd_randomnote_copy.play();
 }
 
@@ -119,42 +98,67 @@ rangeInputs.forEach((input) => {
 });
 
 //########################################################################
-
+// checks if device is phone, changes scroll behavior accordingly
 $(document).ready(function () {
+  var isMobile = navigator.userAgent.toLowerCase().match(/mobile/i);
+  console.log(`ismobile = ${isMobile}`)
+  
+  if ((isMobile) || document.documentElement.clientWidth < 700) {
+    $("#button-aboutme").click(function () {
+      window.location.href='#aboutme';
+    });
+    $("#button-2d_art").click(function () {
+      window.location.href='#2d_art';
+    });
+    $("#button-3d_projects").click(function () {
+      window.location.href='#3d_projects';
+    });
+    $("#button-misc_pages").click(function () {
+      window.location.href='#misc_pages';
+    });
+    $("#button-credits").click(function () {
+      window.location.href='#credits';
+    });
+    $("#button-deerbot").click(function () {
+      window.location.href='#deerbot';
+    });
+  } else {
+    $("#button-aboutme, #button-2d_art, #button-3d_projects, #button-misc_pages, #button-credits, #button-deerbot").click(function () {
+      console.log("clicked while isnt mobile")
+      $("body").scrollTop(0);
+    });
+  }
+
+
+//########################################################################
   $("#button-aboutme").click(function () {
-    window.location.href='#aboutme';
-    $(".layout-right-aboutme").show();
-    $(".layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
+    $(".layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").fadeOut(200);
+    $(".layout-right-aboutme").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-2d_art").click(function () {
-    window.location.href='#2d_art';
-    $(".layout-right-2d_art").show();
-    $(".layout-right-aboutme, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
+    $(".layout-right-aboutme, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").fadeOut(200);
+    $(".layout-right-2d_art").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-3d_projects").click(function () {
-    window.location.href='#3d_projects';
-    $(".layout-right-3d_projects").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-misc_pages, .layout-right-credits, .layout-right-deerbot").fadeOut(200);
+    $(".layout-right-3d_projects").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-misc_pages").click(function () {
-    window.location.href='#misc_pages';
-    $(".layout-right-misc_pages").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-credits, .layout-right-deerbot").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-credits, .layout-right-deerbot").fadeOut(200);
+    $(".layout-right-misc_pages").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-credits").click(function () {
-    window.location.href='#credits';
-    $(".layout-right-credits").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-deerbot").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-deerbot").fadeOut(200);
+    $(".layout-right-credits").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-deerbot").click(function () {
-    window.location.href='#deerbot';
-    $(".layout-right-deerbot").show();
-    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").hide();
+    $(".layout-right-aboutme, .layout-right-2d_art, .layout-right-3d_projects, .layout-right-misc_pages, .layout-right-credits").fadeOut(200);
+    $(".layout-right-deerbot").delay(200).fadeIn(200);
   });
   // ------------------------------------------------------------
   $("#button-deerbot-invite").click(function () {
