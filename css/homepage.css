@@ -11,7 +11,7 @@ html {
   margin: 0;
   font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
-  overflow: overlay;
+  overflow-x: overlay;
 
   background: rgb(5, 17, 23);
   background: rgb(5, 17, 23);
@@ -217,7 +217,7 @@ input[type="range"]::-ms-track {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  overflow: hidden;
+  overflow-x: hidden;
 
   height: 100%;
   width: 100%;
