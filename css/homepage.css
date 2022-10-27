@@ -128,7 +128,7 @@ i:hover,
 	no-repeat fixed center;	 */
 }
 /* ########################################################### */
-#volume-control {
+#music-options {
   -webkit-appearance: none;
   appearance: none;
   position: fixed;
@@ -136,6 +136,10 @@ i:hover,
   bottom: 30px;
   right: 30px;
 }
+#togglebutton {
+  margin-right: 10px;
+}
+
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;

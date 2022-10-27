@@ -78,7 +78,22 @@ function volumeUpdate(e) {
   bg_music.volume = e / 100;
   // console.log(bg_music.volume);
 }
-//################# stuff for volume slider styling #######################
+let isPlaying = true;
+
+const togglebutton = document.querySelector('#togglebutton');
+function togglePause() {
+  if (isPlaying) {
+    bg_music.pause();
+    isPlaying = false;
+    togglebutton.classList.replace("fa-pause","fa-play");
+  } else {
+    bg_music.play();
+    isPlaying = true;
+    togglebutton.classList.replace("fa-play","fa-pause");
+  }
+}
+
+// ############ stuff for volume slider styling #######################
 const rangeInputs = document.querySelectorAll('input[type="range"]');
 
 function handleInputChange(e) {
@@ -159,26 +174,23 @@ $(document).ready(function () {
     };
     const landingpage = document.querySelector(".landingpage");
     landingpage.animate(fadeout, fadeoutTiming);
-    //play bg music and fade out
-    bg_music.volume = 0;
-
+    
     //slowly ramps up volume
+    bg_music.volume = 0;
     const rampVolume = async () => {
-      let increase = 0.01;
       await sleep(300);
       bg_music.play();
       for (let step = 0; step < 50; step++) {
-        bg_music.volume = increase;
-        increase = increase + 0.01;
+        bg_music.volume = (bg_music.volume + 0.01).toFixed(2); // .tofixed rounds it to 2 decimals
         await sleep(50);
-        // console.log(bg_music.volume);
+        console.log(bg_music.volume);
       }
     };
     rampVolume();
     bg_music.autoplay = true;
     bg_music.loop = true;
-
     $(".landingpage").hide(500);
+//#####
   });
   
   // ############################################
@@ -204,3 +216,5 @@ $(document).ready(function () {
 });
 
 /*##########################################################*/
+// const drawings = $('gallery-img-2d');
+// console.log(`drawings: ${drawings}`);

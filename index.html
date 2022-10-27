@@ -41,14 +41,16 @@
 		<div id="particles-js" style="position:fixed; width: 100%; height: 110%;"></div>
 		<div class="landingpage">
 			<button type="button" class="box menubutton" id="button-enterpage">Enter Website</button>
-			
 		</div>
-		
-		<input oninput="volumeUpdate(this.value)" 
-		type="range" value="50" min="0" max="100" 
-		oninput="rangevalue.value=value" 
-		id="volume-control"/>
-		
+
+		<div id="music-options">
+			<i id="togglebutton" class="fa-solid fa-pause togglebutton i-nostyle" onclick="togglePause()"></i>
+			<input oninput="volumeUpdate(this.value)" 
+			type="range" value="50" min="0" max="100" 
+			oninput="rangevalue.value=value" 
+			id="volume-control"/>
+		</div>
+
 		<div class="layout-whole-page">
 			<div class="layout-left-side">
 				
@@ -181,7 +183,7 @@
 								<div class="gallery-tile">
 									<div>
 										<div class=".gallery-img-div">
-											<img loading="lazy" alt="alt" src="./assets/personal/2d art/hello twitter 2k.png">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/hello twitter 2k.png" class=".gallery-img-2d">
 										</div>
 										<p class="gallery-caption">hello birdapp</p>
 									</div>
@@ -190,7 +192,7 @@
 								<div class="gallery-tile">
 									<div>
 										<div class=".gallery-img-div">
-											<img loading="lazy" alt="alt" src="./assets/personal/2d art/june_bench.png">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/june_bench.png" class=".gallery-img-2d">
 										</div>
 										<p class="gallery-caption">June on the bench</p>
 									</div>
@@ -199,7 +201,7 @@
 								<div class="gallery-tile">
 									<div>
 										<div class=".gallery-img-div">
-											<img loading="lazy" alt="alt" src="./assets/personal/2d art/current.png">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/current.png" class=".gallery-img-2d">
 										</div>
 										<p class="gallery-caption">current pfp meow</p>
 									</div>
@@ -208,9 +210,18 @@
 								<div class="gallery-tile">
 									<div>
 										<div class=".gallery-img-div">
-											<img loading="lazy" alt="alt" src="./assets/personal/2d art/dhtghfghfgh.jpeg">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/dhtghfghfgh.jpeg" class=".gallery-img-2d">
 										</div>
 										<p class="gallery-caption">vent art</p>
+									</div>
+								</div>
+
+								<div class="gallery-tile">
+									<div>
+										<div class=".gallery-img-div">
+											<img loading="lazy" alt="alt" src="./assets/personal/2d art/furry luz final.png" class=".gallery-img-2d">
+										</div>
+										<p class="gallery-caption">furry luz!</p>
 									</div>
 								</div>
 
