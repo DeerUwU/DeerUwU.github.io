@@ -31,8 +31,8 @@ for file in full_res_art:
         else:
             img = Image.open(f'{parent_dir}{file}').convert("RGB")
             print(f"thumb created for {file}")
-            img.thumbnail(size=(400,400))
-            img.save(f'{thumb_path}{filename_no_ext}.jpg', optimize=True, quality=65)
+            img.thumbnail(size=(500,500))
+            img.save(f'{thumb_path}{filename_no_ext}.jpg', optimize=True, quality=85)
     else:
         print("not a file")
         
