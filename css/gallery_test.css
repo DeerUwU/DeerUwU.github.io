@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+:root {
+  --radius-m: 15px;
+  --box_padding: 24px;
+  --deer_red: #ff4c4d;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: overlay;
+}
+
+
+/* ##################### gallery ######################### */
+.gallery-container {
+  column-count: 3;
+  margin-top: 20px;
+}
+
+.gallery-tile {
+  padding-bottom: 20px;
+}
+/*custom*/
+.gallery-tile img {
+  /* image in the tile */
+  width: 100%;
+  transition: transform 0.3s;
+}
+.gallery-tile div {
+  overflow: hidden;
+}
+.gallery-tile:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-tile div {
+  /* image and caption */
+  position: relative;
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--radius-s) var(--radius-s) 0 0; /* top 2 corners rounded*/
+}
+.gallery-img-div {
+  overflow: hidden;
+}
+
+.gallery-caption {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+
+  background: #00000078;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0 0 var(--radius-s) var(--radius-s); /* bottom 2 corners rounded*/
+}
+
+.gallery-img-2d {
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  
+  max-width: 80%;
+}
+
+.modal_bg {
+  display: flex;
+  position:absolute;
+  top:0%;
+  right: 0%;
+  width:100%!important;
+  height:100%!important;
+  background:rgba(0, 0, 0, 0.495);
+  backdrop-filter: blur(10px);
+}
+.modal_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ##################################################################*/

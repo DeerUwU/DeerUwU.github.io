@@ -513,6 +513,28 @@ area {
   border-radius: 0 0 var(--radius-s) var(--radius-s); /* bottom 2 corners rounded*/
 }
 
+.modal {
+  display: none;
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal_bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top:0%;
+  right: 0%;
+  position:absolute;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  width:100vw!important;
+  height:100vh!important;
+  background:rgba(0, 0, 0, 0.495);
+  backdrop-filter: blur(10px);
+}
 /* ##################################################################*/
 .deerbot-box {
   display: flex;

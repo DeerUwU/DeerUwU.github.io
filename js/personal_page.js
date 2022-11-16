@@ -216,5 +216,19 @@ $(document).ready(function () {
 });
 
 /*##########################################################*/
-// const drawings = $('gallery-img-2d');
-// console.log(`drawings: ${drawings}`);
+$(".modal_bg").hide();
+
+$(".gallery-tile").click(function(){
+	$(".modal").hide();
+	var Type = $(this).data("modal-type");
+	$(".modal_bg").show(300);
+	$("#"+Type).show(300);
+	
+ });
+ 
+$(".modal_bg").click(function(){
+	$(".modal").hide(300);
+	var Type = $(this).data("modal-type");
+	$("#"+Type).hide(300);
+	$(".modal_bg").hide(300);
+ });
