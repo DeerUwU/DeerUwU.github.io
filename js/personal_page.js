@@ -220,15 +220,43 @@ $(".modal_bg").hide();
 
 $(".gallery-tile").click(function(){
 	$(".modal").hide();
-	var Type = $(this).data("modal-type");
+	var dataType = $(this).data("modal-type");
 	$(".modal_bg").show(300);
-	$("#"+Type).show(300);
+	$("#"+dataType).show(300);
+  console.log(dataType)
 	
  });
  
 $(".modal_bg").click(function(){
 	$(".modal").hide(300);
-	var Type = $(this).data("modal-type");
-	$("#"+Type).hide(300);
+	var dataType = $(this).data("modal-type");
+	$("#"+dataType).hide(300);
 	$(".modal_bg").hide(300);
  });
+
+// $("37").keydown(function(){ //arrow left
+//   $("#"+dataType).hide(300);
+//   var typeNumber = dataType.slice(8);
+//   typeNumber = typeNumber - 1;
+//   if (typeNumber <= 0) {
+//     typeNumber = 1;
+//   }
+//   $("#"+dataType.slice(0,8)+typeNumber).show(300);
+// });
+
+// function sampleKeyCode(event) {
+//   var dataType = $(this).data("modal-type");
+//   var keycode = (event.keyCode ? event.keyCode : event.which);
+
+//   console.log(keycode);
+//   if(keycode == '37'){
+//     $("#"+dataType).hide(300);
+
+//     var typeNumber = String(dataType).slice(8);
+//     typeNumber = typeNumber - 1;
+//     if (typeNumber <= 0) {
+//       typeNumber = 1;
+//     }
+//     $("#"+dataType.slice(0,8)+typeNumber).show(300);
+//   }
+// }
