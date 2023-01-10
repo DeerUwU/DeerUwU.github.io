@@ -177,7 +177,7 @@ video {border-radius: var(--radius-m);}
 	background-position: center;
 }
 .item2 {
-	background-image: url("../assets/small/king.png");
+	background-image: url("../assets/small/chess.png");
 	background-size: cover;
 }
 .item3 {
@@ -185,11 +185,11 @@ video {border-radius: var(--radius-m);}
 	background-size: cover;
 }
 .item4 {
-	background-image: url("../assets/small/forest_hl2.jpg");
+	background-image: url("../assets/small/winchester_model_1886.png");
 	background-size: cover;
 }
 .item5 {
-	background-image: url("../assets/deerbot_full_square.png");
+	background-image: url("../assets/small/simple cutout white.png");
 	background-size: cover;
 }
 
@@ -198,7 +198,13 @@ video {border-radius: var(--radius-m);}
 	background-size: cover;
 }
 
-.item7, .item8 {
+.item7{
+	background-image: url("../assets/small/razor train poster.png");
+	background-size: cover;
+} 
+
+
+.item8 {
 	background-image: url("../assets/coming_soon.png");
 	background-size: cover;
 	cursor: default!important;
