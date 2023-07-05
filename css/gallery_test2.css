@@ -1,0 +1,60 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  
+}
+
+img {width: 100%;}
+
+.vertical-split {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vertical-split > div {
+    width: 50%;
+  }
+  
+  .gallery-container {
+    column-count: 2;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 20px;
+
+  }
+  
+  .gallery-div {
+    border-radius: 10px;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: 10px;
+  }
+
+  .gallery-img { 
+    /* image in the tile */
+    width: 100%;
+    
+  }
+  .gallery-img:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+  }
+
+  .modal_bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top:0%;
+    right: 0%;
+    position:absolute;
+    z-index: 10;
+    width:100vw!important;
+    height:100vh!important;
+    background:rgba(0, 0, 0, 0.495);
+    backdrop-filter: blur(10px);
+  }
+  
+  #modal-placeholder {
+    max-width: 90%;
+    max-height: 90%;
+  }

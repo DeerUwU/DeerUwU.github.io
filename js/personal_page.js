@@ -190,49 +190,34 @@ $(document).ready(function () {
     bg_music.autoplay = true;
     bg_music.loop = true;
     $(".landingpage").hide(500);
-//#####
   });
-  
-  // ############################################
-  // $("#img-hello_transparent").click(function () {
-  //   const snd_squeak_copy = snd_squeak.cloneNode(); //copies the sound so it can overlap
-  //   snd_squeak_copy.play();
-  //   // ###########squish uwu ################
-  //   const squish = [
-  //     { transform: "scaleY(100%)", easing: "ease-in-out" },
-  //     { transform: "scaleY(95%)", easing: "ease-in-out" },
-  //     { transform: "scaleY(100%)", easing: "ease-in-out" },
-  //   ];
-  //   const squishTiming = {
-  //     duration: 100 /*500 ms*/,
-  //     iterations: 1,
-  //     fill: "forwards",
-  //   };
-  //   const img_hello = document.querySelector("#img-hello_transparent");
-  //   img_hello.animate(squish, squishTiming);
-  // });
-  // ############################################
   
 });
 
-/*##########################################################*/
-$(".modal_bg").hide();
 
-$(".gallery-tile").click(function(){
-	$(".modal").hide();
-	var dataType = $(this).data("modal-type");
-	$(".modal_bg").show(300);
-	$("#"+dataType).show(300);
-  console.log(dataType)
+
+/*##########################################################*/
+//$(".modal_bg").hide();
+
+
+
+
+
+// $(".gallery-tile").click(function(){
+// 	$(".modal").hide();
+// 	var dataType = $(this).data("modal-type");
+// 	$(".modal_bg").show(300);
+// 	$("#"+dataType).show(300);
+//   console.log(dataType)
 	
- });
+//  });
  
-$(".modal_bg").click(function(){
-	$(".modal").hide(300);
-	var dataType = $(this).data("modal-type");
-	$("#"+dataType).hide(300);
-	$(".modal_bg").hide(300);
- });
+// $(".modal_bg").click(function(){
+// 	$(".modal").hide(300);
+// 	var dataType = $(this).data("modal-type");
+// 	$("#"+dataType).hide(300);
+// 	$(".modal_bg").hide(300);
+//  });
 
 // $("37").keydown(function(){ //arrow left
 //   $("#"+dataType).hide(300);

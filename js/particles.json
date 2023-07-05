@@ -95,14 +95,14 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 400,
+        "distance": 100,
         "duration": 0.4
       },
       "push": {
         "particles_nb": 4
       },
       "remove": {
-        "particles_nb": 2
+        "particles_nb": 4
       }
     }
   },

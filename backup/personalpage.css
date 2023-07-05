@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+:root {
+  --radius-m: 15px;
+  --box_padding: 24px;
+  --deer_red: #ff4c4d;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: overlay;
+
+  background: rgb(5, 17, 23);
+  background: rgb(5, 17, 23);
+  background: linear-gradient(
+      180deg,
+      rgba(5, 17, 23, 1) 0%,
+      rgba(27, 15, 52, 1) 57%,
+      rgba(59, 38, 87, 1) 100%
+    )
+    no-repeat fixed center;
+
+  transition-duration: 0.5s;
+}
+
+h1 {
+  color: var(--deer_red);
+}
+p,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+h2 {
+  margin: 0;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+p {
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+}
+
+span {
+  /*responsible for the social icons*/
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+
+img.emoji {
+  user-select: text;
+  width: 1em;
+  vertical-align: middle;
+  cursor: text;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+i,
+.underline,
+.link {
+  color: white;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--deer-magenta);
+  user-select: none;
+  transition: text-decoration-color 0.2s;
+}
+i:hover,
+.underline:hover,
+.link:hover {
+  text-decoration-color: #e54085;
+}
+
+.i-nostyle {
+  text-decoration: none;
+  font-style: normal;
+}
+/* ########################################################### */
+::-webkit-scrollbar {
+  width: 2vw;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border: 15px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #a324597a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--deer-magenta);
+}
+
+/* ########################################################### */
+.landingpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: #0000007f;
+
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute;
+  z-index: 99;
+
+  /* background: rgb(5,17,23);
+	background: linear-gradient(180deg, 
+	rgba(5,17,23,1) 0%, 
+	rgba(27,15,52,1) 57%, 
+	rgba(59,38,87,1) 100%)
+	no-repeat fixed center;	 */
+}
+/* ########################################################### */
+#music-options {
+  -webkit-appearance: none;
+  appearance: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 30px;
+}
+#togglebutton {
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(150, 42, 81, 0.2);
+  border-radius: 5px;
+  background-image: linear-gradient(var(--deer-magenta), var(--deer-magenta));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Input Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #d94281;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #d94281;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #d94281;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #f465a0;
+}
+input[type="range"]::-moz-range-thumb:hover {
+  background: #f465a0;
+}
+input[type="range"]::-ms-thumb:hover {
+  background: #f465a0;
+}
+
+/* Input Track */
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track,
+input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+/* ########################################################### */
+.box {
+  border-radius: var(--radius-m);
+  background: rgba(150, 42, 81, 0.2);
+  border: 4px solid var(--deer-magenta);
+  min-height: 50px;
+  backdrop-filter: blur(5px);
+}
+
+.layout-whole-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow-x: hidden;
+
+  height: 100%;
+  width: 100%;
+}
+.layout-left-side,
+.layout-right-side,
+.layout-egg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 50vw; /* makes sure theyre both equally wide at 50% of the screen width */
+  padding: var(--box_padding); /* initial padding for left and right half */
+  z-index: 1; /* !!! remove this for final side so you can create particles freely */
+}
+
+/* make everything scale responsively */
+.layout-left-introduction,
+.layout-left-menu,
+.layout-right-2d_art,
+.layout-right-3d_projects {
+  width: 100%;
+}
+.layout-right-misc_pages,
+.layout-right-deerbot {
+  /* it looks weird when its too wide */
+  min-width: min-content;
+  width: 80%;
+}
+.layout-right-credits,
+.layout-right-aboutme {
+  /* it looks weird when its too wide */
+  min-width: min-content;
+  width: 60%;
+}
+
+/* vvvv comment out the one that should show up at the start */
+/*.layout-right-aboutme,*/ .layout-right-2d_art, 
+.layout-right-3d_projects, .layout-right-misc_pages,
+.layout-right-credits, .layout-right-deerbot {
+  display: none;
+}
+
+.layout-right-contents {
+  padding: var(--box_padding);
+}
+
+.layout-egg {
+  display: flex;
+  /* width: 100%; */
+  width: inherit;
+  margin-top: 300vh;
+}
+.layout-egg-content {
+  width: 60%;
+  padding: var(--box_padding);
+}
+/* ########################################################### */
+.layout-left-introduction {
+  /*  this gets no padding so the image can sit at the bottom */
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction-text {
+  padding: var(--box_padding) 0 var(--box_padding) var(--box_padding);
+}
+
+.introduction-img {
+  /* this is the container */
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* positions image at bottom */
+  align-items: center; /* centers image horizontally */
+  /* width: 80%; */
+}
+#img-hello_transparent {
+  max-height: 300px;
+  max-width: 300px;
+  cursor: pointer;
+  /* vvv when clicking for squeaks it only transforms downwards */
+  transform-origin: 50% 100%;
+}
+/* ########################################################### */
+.social_icon {
+  color: white;
+  display: inline-block;
+  height: 2.2rem;
+  min-width: 2.2rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 1.32rem;
+  margin: 12px 0;
+}
+.fa-fw {
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 1.5em !important;
+  transition: opacity 0.3s ease !important;
+}
+.fa-fw:hover {
+  opacity: 0.7 !important;
+}
+
+.fa-twitter {
+  background-color: #179cde;
+}
+.fa-discord {
+  background-color: #5662f6;
+}
+.fa-youtube {
+  background-color: #fe0000;
+}
+.fa-steam {
+  background-color: #133164;
+}
+.fa-artstation {
+  background-color: #13aff0;
+}
+.fa-telegram {
+  background-color: #179cde;
+}
+/* ########################################################### */
+.layout-left-menu {
+  padding-top: var(--box_padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menubutton {
+  display: inline-block;
+  justify-content: center;
+  width: 50%;
+  min-width: fit-content;
+
+  border-radius: 500px;
+  margin: 12px 0;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+.menubutton:hover {
+  cursor: pointer;
+  background-color: rgba(211, 35, 99, 0.5);
+  box-shadow: 5px 5px 0px 0px #460925c2;
+}
+.menubutton:active {
+  transition-duration: 0s;
+  background: rgba(206, 206, 206, 0.8);
+  box-shadow: 5px 5px 0px 0px #460925c2;
+}
+.menubutton-content,
+button {
+  color: white;
+  font-size: 28px;
+  font-weight: medium;
+  line-height: 36px;
+  padding: 15px;
+  text-align: center;
+}
+/* ########################################################### */
+.aboutmecontent {
+  padding: 15px 0; /* padding above and below the about me things*/
+}
+
+/* ##################################################################*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltiptext {
+  white-space: nowrap;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000000b3;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000000b3 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* p.text-copied {
+    position: absolute;
+    left: 0;
+    top: 0;
+	z-index: 3;
+    width: 100%;
+    cursor: default;
+} */
+/* ########################################################### */
+area {
+  cursor: pointer;
+}
+
+#heartnote {
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+#heartnote:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+#sparkles {
+  width: 1.5rem;
+}
+#sparkles {
+  cursor: pointer;
+}
+
+.menubutton-content {
+  user-select: none;
+}
+/* ##################### gallery ######################### */
+.gallery-container {
+  column-count: 3;
+  margin-top: 20px;
+}
+
+.gallery-tile {
+  padding-bottom: 20px;
+}
+/*custom*/
+.gallery-tile img {
+  /* image in the tile */
+  width: 100%;
+  transition: transform 0.3s;
+}
+.gallery-tile div {
+  overflow: hidden;
+}
+.gallery-tile:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-tile div {
+  /* image and caption */
+  position: relative;
+  display: flex;
+  /* align-items: flex-start; */
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--radius-s) var(--radius-s) 0 0; /* top 2 corners rounded*/
+}
+.gallery-img-div {
+  overflow: hidden;
+}
+
+.gallery-caption {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+
+  background: #00000078;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0 0 var(--radius-s) var(--radius-s); /* bottom 2 corners rounded*/
+}
+
+.modal {
+  display: none;
+  /* position: absolute; */
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal_bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top:0%;
+  right: 0%;
+  position:absolute;
+  z-index: 10;
+  width:100vw!important;
+  height:100vh!important;
+  background:rgba(0, 0, 0, 0.495);
+  backdrop-filter: blur(10px);
+}
+
+#arrow-left, #arrow-right {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  padding: 0px 20px;
+  background:#00000063;
+  transition: background .5s;
+}
+#arrow-left:hover, #arrow-right:hover {
+  background:#60606063;
+}
+
+#arrow-left > p, #arrow-right > p {
+  font-size: 75px;
+}
+
+/* ##################################################################*/
+.deerbot-box {
+  display: flex;
+  background: #555;
+  border-radius: var(--radius-m);
+
+  padding: 10px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+.deerbot-box > img {
+  height: 64px;
+  width: 64px;
+  margin: 0 20px 0 0;
+}
+#deerbot-invite-div {
+	display:flex;
+	width:50%
+}
+#button-deerbot-invite {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 20px;
+}
+/* ##################################################################*/
+@media only screen and (max-width: 1499px) {
+  .layout-left-introduction {
+    flex-direction: column;
+  }
+  .introduction-text {padding: var(--box_padding);} /* evens out padding */
+
+  .layout-right-aboutme,
+  .layout-right-misc_pages,
+  .layout-right-deerbot,
+  .layout-right-credits,
+  .layout-right-aboutme,
+  #deerbot-invite-div {
+    min-width: min-content;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  /* :root{--box_padding: 12px;} */
+  span {padding: 0.3em;} /* responsible for the social icons */
+
+  .layout-left-side,
+  .layout-right-side {
+    width: fit-content;
+  }
+  .layout-right-aboutme,
+  .layout-right-misc_pages,
+  .layout-right-credits,
+  .layout-right-deerbot {
+    width: 100%;
+  }
+
+  .gallery-container {column-count: 2;}
+}
+@media only screen and (max-width: 699px) {
+  .layout-whole-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+/* phone screens only  */
+@media only screen and (hover: none) and (pointer: coarse) {
+  :root {
+    --box_padding: 12px;
+  }
+
+  .layout-left-side,
+  .layout-right-side,
+  .layout-right-aboutme {
+    width: fit-content;
+  }
+  /* this is to prevent volume slider from obstructing things*/
+  .layout-right-side {margin-bottom: 40px;} 
+
+  p {font-size: 16px;}
+  span {padding: 0.3em;} /* responsible for the social icons */
+  #deerbot-invite-div {width:80%} /* makes button wider again */
+}
+
+/* ##################################################################*/
