@@ -183,7 +183,7 @@ $(document).ready(function () {
       for (let step = 0; step < 50; step++) {
         bg_music.volume = (bg_music.volume + 0.01).toFixed(2); // .tofixed rounds it to 2 decimals
         await sleep(50);
-        console.log(bg_music.volume);
+        //console.log(bg_music.volume);
       }
     };
     rampVolume();
