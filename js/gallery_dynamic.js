@@ -31,9 +31,10 @@ function joinPath(folderPath, fileNameList) {
         
         $(newNode).click(function(){ //modal part
             $(".modal").hide();
+            document.getElementById("modal-placeholder").src = `${folderPath}/${fileNameList[i]}`; //
             $(".modal_bg").show(300);
             
-            document.getElementById("modal-placeholder").src = `${folderPath}/${fileNameList[i]}`; //
+            
         });
         
         let divNode = document.createElement('div');
@@ -63,6 +64,7 @@ processList(folderPath3d, fetchfile3d);
 
 $(".modal_bg").click(function(){ //closes modal when you click
     $(".modal_bg").hide(300);
+    document.getElementById("modal-placeholder").src = "" //removes image so it doesnt show up after clicking another one
 });
 
 
