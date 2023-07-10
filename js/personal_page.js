@@ -129,6 +129,16 @@ $(document).ready(function () {
     });
   }
 
+  if (isMobile) { //if on mobile it loads less particles to increase performance 
+    particlesJS.load("particles-js", "js/particles_mobile.json", function(){
+      console.log("particles_mobile.json loaded uwu")
+    });
+  } else {
+      particlesJS.load("particles-js", "js/particles.json", function(){
+				console.log("particles.json loaded uwu")
+			});
+  };
+
 
 //########################################################################
   $("#button-aboutme").click(function () {
