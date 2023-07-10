@@ -609,6 +609,15 @@ area {
     --box_padding: 12px;
   }
 
+
+  .modal_bg {
+    backdrop-filter: saturate(0.2);
+  }
+  .box {
+    background: rgb(0 0 0 / 20%);
+    backdrop-filter: unset;
+  }
+
   .layout-left-side,
   .layout-right-side,
   .layout-right-aboutme {
@@ -621,5 +630,6 @@ area {
   span {padding: 0.3em;} /* responsible for the social icons */
   #deerbot-invite-div {width:80%} /* makes button wider again */
 }
+
 
 /* ##################################################################*/
