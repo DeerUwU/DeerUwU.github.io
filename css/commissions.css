@@ -1,0 +1,49 @@
+:root {
+    --deer_red: #ff4c4d;
+}
+
+p {
+    font-size: 18px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  margin: 0;
+}
+
+
+.sidenote {
+    text-align:center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.commission-textbox {
+    width: 60%;
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.green {
+    color:#4cea5e;
+}
+.yellow {
+    color:#e0ea4c;
+}
+
+.red {
+    color:#ff4136;
+}
+
+.hr-rounded {
+	/* border-width: 4px; */
+	border-radius: var(--radius-m);
+	margin: 40px 0px 20px 0px;
+	border: 2px solid var(--deer_red);
+	color: var(--deer_red);
+}
