@@ -3,6 +3,17 @@ import os
 import PIL
 import glob
  
+from colorama import init as colorama_init
+from colorama import Fore
+from colorama import Style
+
+#----------------------------------------------------------------------------------------------------
+colorama_init() #makes colors work
+
+block_red =         f"{Fore.LIGHTRED_EX}██{Style.RESET_ALL}"
+block_green =       f"{Fore.GREEN}██{Style.RESET_ALL}"
+block_yellow =      f"{Fore.YELLOW}██{Style.RESET_ALL}"
+block_cyan =        f"{Fore.CYAN}██{Style.RESET_ALL}"
 ####################################################################################
 # Parent Directory path
 parent_dir_2d = "2d art\\"
@@ -17,7 +28,7 @@ here = os.path.dirname(os.path.abspath(__file__)) #filepath of this file
 ####################################################################################
 
 def generate_dir(parent_dir): 
-    print("############ generate directories ##############")
+    print(f"{Fore.CYAN}############ generate directories ##############{Style.RESET_ALL}")
     path = os.path.join(here, parent_dir)
 
     if os.path.exists(path):
@@ -29,7 +40,7 @@ def generate_dir(parent_dir):
 ####################################################################################
 
 def generate_fetchfile(parent_dir, fetchfile): 
-    print("############ generate fetchfile ##############")
+    print(f"{Fore.CYAN}############ generate fetchfile ##############{Style.RESET_ALL}")
     path = os.path.join(here, fetchfile) #current filepath + /thumb path
     print("fetchfile path: ", path)
 
@@ -43,7 +54,7 @@ def generate_fetchfile(parent_dir, fetchfile):
 ####################################################################################
 
 def generate_thumbnails(parent_dir, thumb_path, fetchfile):
-    print("############ generate thumbnails ##############")
+    print(f"{Fore.CYAN}############ generate thumbnails ##############{Style.RESET_ALL}")
     parent_dir = os.path.join(here, parent_dir) #append the full filepath bc functions stinky
     print("parent_dir: ", parent_dir)
     thumb_path = os.path.join(here, thumb_path)
@@ -66,19 +77,18 @@ def generate_thumbnails(parent_dir, thumb_path, fetchfile):
             if filename_ext == ".png" or  filename_ext == ".jpg" or  filename_ext == "jpeg" or  filename_ext == ".gif": #only converts to thumbnail if one of the file types
                 # print(filename_ext + " filetype is image")
                 f.write(f"{file}\n")                   # writes filepath
-                print(f"filepath added {file}")
                 
                 if os.path.exists(f"{thumb_path}{filename_no_ext}.jpg"):
-                    print(f"{filename_no_ext}.jpg already exists")
+                    print(f"{block_yellow} {filename_no_ext}.jpg already exists")
                 else:
                     img = Image.open(f'{parent_dir}{file}').convert("RGB")
-                    print(f"thumb created for {file}")
+                    print(f"{block_green} thumb created for {file}")
                     img.thumbnail(size=(500,500))
                     img.save(f'{thumb_path}{filename_no_ext}.jpg', optimize=True, quality=85)
             else:
-                print(file + " not an image")
+                print(f"{block_cyan}\"{file}\" not an image")
         else:
-            print("not a file")
+            print(f"{block_cyan}\"{file}\" is a folder")
 
     f.close()                       # closes fetchfile
         
@@ -90,3 +100,5 @@ generate_fetchfile(parent_dir_2d, fetchfile_2d)
 generate_fetchfile(parent_dir_3d, fetchfile_3d)
 generate_thumbnails(parent_dir_2d, thumb_path_2d, fetchfile_2d)
 generate_thumbnails(parent_dir_3d, thumb_path_3d, fetchfile_3d)
+
+input("Press Enter to close")
