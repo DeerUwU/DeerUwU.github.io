@@ -74,7 +74,7 @@ def generate_thumbnails(parent_dir, thumb_path, fetchfile):
             filename_no_ext = os.path.splitext(file)[0] #removes the file extension
             filename_ext = os.path.splitext(file)[1]
 
-            if filename_ext == ".png" or  filename_ext == ".jpg" or  filename_ext == "jpeg" or  filename_ext == ".gif": #only converts to thumbnail if one of the file types
+            if filename_ext == ".png" or  filename_ext == ".jpg" or  filename_ext == ".jpeg" or  filename_ext == ".gif": #only converts to thumbnail if one of the file types
                 # print(filename_ext + " filetype is image")
                 f.write(f"{file}\n")                   # writes filepath
                 
