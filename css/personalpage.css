@@ -309,6 +309,10 @@ input[type="range"]::-ms-track {
   transform-origin: 50% 100%;
 }
 /* ########################################################### */
+
+.social-icon-row {
+  display:inline-flex;
+}
 .social_icon {
   color: white;
   display: inline-block;
@@ -318,15 +322,19 @@ input[type="range"]::-ms-track {
   border-radius: 0.25rem;
   border: none;
   font-size: 1.32rem;
-  margin: 12px 0;
+  margin: auto;
+  width: 32px;
+  height: 32px;
 }
-.fa-fw {
-  width: 32px !important;
-  height: 32px !important;
-  line-height: 1.5em !important;
-  transition: opacity 0.3s ease !important;
+.social-buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5em !important;
+    transition: opacity 0.3s ease !important;
 }
-.fa-fw:hover {
+.social-buttons:hover {
   opacity: 0.7 !important;
 }
 
@@ -350,6 +358,9 @@ input[type="range"]::-ms-track {
 }
 .fa-telegram {
   background-color: #179cde;
+}
+.fa-pixilart {
+  background-color: #ff2659;
 }
 /* ########################################################### */
 .layout-left-menu {
@@ -400,7 +411,6 @@ button {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
 }
 .tooltiptext {
   white-space: nowrap;
