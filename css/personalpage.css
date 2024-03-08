@@ -29,14 +29,11 @@ html {
 h1 {
   color: var(--deer_red);
 }
-p,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+p, h2, h3, h4, h5, h6 {
   color: white;
 }
+
 h2 {
   margin: 0;
 }
@@ -291,40 +288,36 @@ input[type="range"]::-ms-track {
   padding: var(--box_padding) 0 var(--box_padding) var(--box_padding);
 }
 
-.introduction-img {
-  /* this is the container */
+.introduction-header {
   display: block;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* positions image at bottom */
-  align-items: center; /* centers image horizontally */
-  /* width: 80%; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-#img-hello_transparent {
-  max-height: 300px;
-  max-width: 300px;
+#img-aboutme {
+  max-height: 96px;
+  max-width: 96px;
   cursor: pointer;
+  margin-left: 15px;
   /* vvv when clicking for squeaks it only transforms downwards */
   transform-origin: 50% 100%;
 }
 /* ########################################################### */
 
-.social-icon-row {
-  display:inline-flex;
+#social-icon-row {
+  display:flex;
+  justify-content: center;
 }
 .social_icon {
   color: white;
-  display: inline-block;
-  height: 2.2rem;
-  min-width: 2.2rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  border: none;
-  font-size: 1.32rem;
-  margin: auto;
-  width: 32px;
-  height: 32px;
+  display: inline-block!important;
+  text-align: center!important;
+  font-size: 1.32rem!important;
+  margin: 10px!important;
+  width: 32px!important;
+  height: 32px!important;
 }
 .social-buttons {
     

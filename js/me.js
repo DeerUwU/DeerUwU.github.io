@@ -49,7 +49,7 @@ function clicksqueak() {
   const snd_squeak_copy = snd_squeak.cloneNode(); //copies the sound so it can overlap
   snd_squeak_copy.play();
 
-  const img_hello = document.querySelector("#img-hello_transparent");
+  const img_hello = document.querySelector("#img-aboutme");
   img_hello.animate(squish, squishTiming);
 }
 
