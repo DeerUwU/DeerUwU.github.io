@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1730121546|4226818204';
+const CACHE_VERSION = '1730137131|3258010116';
 /** @type {string} */
 const CACHE_PREFIX = 'Deer's Desktop-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
