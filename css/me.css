@@ -107,6 +107,7 @@ i:hover,
 /* ########################################################### */
 .landingpage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(20px);
@@ -116,13 +117,6 @@ i:hover,
   width: 100% !important;
   position: absolute;
   z-index: 99;
-
-  /* background: rgb(5,17,23);
-	background: linear-gradient(180deg, 
-	rgba(5,17,23,1) 0%, 
-	rgba(27,15,52,1) 57%, 
-	rgba(59,38,87,1) 100%)
-	no-repeat fixed center;	 */
 }
 /* ########################################################### */
 #music-options {
@@ -394,6 +388,19 @@ button {
   line-height: 36px;
   padding: 15px;
   text-align: center;
+}
+
+#button-enter_oldpage {
+  background-color: unset;
+  color: grey;
+  border: none;
+  height: 30px;
+  font-size: 16px;
+  padding: 0px;
+  transition-duration: 0.3s;
+}
+#button-enter_oldpage:hover {
+  color: var(--deer-magenta);
 }
 /* ########################################################### */
 .aboutmecontent {

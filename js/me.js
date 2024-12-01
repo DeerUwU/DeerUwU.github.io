@@ -172,10 +172,13 @@ $(document).ready(function () {
   });
   // ------------------------------------------------------------
   $("#button-deerbot-invite").click(function () {
-    window.open("https://discordapp.com/oauth2/authorize?&client_id=673945530019217430&scope=bot&permissions=67620032", '_blank');
+    // window.open("https://discordapp.com/oauth2/authorize?&client_id=673945530019217430&scope=bot&permissions=67620032", '_blank');
   });
   // ------------------------------------------------------------
   $("#button-enterpage").click(function () {
+    window.open("https://cakeeh.art/desktop/");
+  });
+  $("#button-enter_oldpage").click(function () {
     const fadeout = [{ opacity: "1", easing: "ease-in-out" }, { opacity: "0" }];
     const fadeoutTiming = {
       duration: 500 /*500 ms*/,
